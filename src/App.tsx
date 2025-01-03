@@ -150,18 +150,39 @@ const TestDescription = styled.p`
 
 const App: React.FC = () => {
   const [selectedTest, setSelectedTest] = useState<number | null>(null);
-  const [testResult, setTestResult] = useState<number | null>(null);
+  const [testResults, setTestResults] = useState<{
+    [testId: number]: {
+      score: number | null;
+      selectedAnswers: { [questionId: number]: string };
+      isSubmitted: boolean;
+    };
+  }>({});
 
   const handleTestSelect = (testId: number) => {
     setSelectedTest(testId);
-    setTestResult(null);
   };
 
-  const handleTestComplete = (score: number | null) => {
-    // Keep test view open, don't navigate back
-    if (score !== null) {
-      setTestResult(score);
-    }
+  const handleTestComplete = (
+    testId: number,
+    score: number | null,
+    selectedAnswers: { [questionId: number]: string }
+  ) => {
+    setTestResults((prev) => ({
+      ...prev,
+      [testId]: {
+        score,
+        selectedAnswers,
+        isSubmitted: true,
+      },
+    }));
+  };
+
+  const handleTestReset = (testId: number) => {
+    setTestResults((prev) => {
+      const newResults = { ...prev };
+      delete newResults[testId];
+      return newResults;
+    });
   };
 
   return (
@@ -173,9 +194,22 @@ const App: React.FC = () => {
             {testsData.tests.map((test) => (
               <TestCard key={test.id} onClick={() => handleTestSelect(test.id)}>
                 <TestTitle>{test.title}</TestTitle>
-                <TestDescription>
-                  {test.questions.length} questions
-                </TestDescription>
+                <div
+                  style={{
+                    display: "flex",
+                    flexDirection: "column",
+                    gap: "0.5rem",
+                  }}
+                >
+                  <TestDescription>
+                    {test.questions.length} questions
+                  </TestDescription>
+                  {testResults[test.id]?.isSubmitted && (
+                    <TestDescription style={{ color: "#2F855A" }}>
+                      Last score: {testResults[test.id].score?.toFixed(1)}/10
+                    </TestDescription>
+                  )}
+                </div>
               </TestCard>
             ))}
           </TestList>
@@ -189,7 +223,11 @@ const App: React.FC = () => {
           timeLimit={
             testsData.tests.find((test) => test.id === selectedTest)!.timeLimit
           }
-          onComplete={handleTestComplete}
+          onComplete={(score, answers) =>
+            handleTestComplete(selectedTest, score, answers)
+          }
+          onReset={() => handleTestReset(selectedTest)}
+          savedState={testResults[selectedTest]}
           onBack={() => setSelectedTest(null)}
         />
       )}

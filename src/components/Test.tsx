@@ -345,6 +345,29 @@ const SubmitButton = styled.button`
   }
 `;
 
+const ResetButton = styled.button`
+  background: linear-gradient(135deg, #f56565, #e53e3e);
+  color: white;
+  padding: 0.75rem 1.5rem;
+  border: none;
+  border-radius: 12px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  margin-top: 1rem;
+  box-shadow: 0 4px 12px rgba(245, 101, 101, 0.3);
+
+  &:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 16px rgba(245, 101, 101, 0.4);
+  }
+
+  &:active {
+    transform: translateY(0);
+  }
+`;
+
 const ResultContainer = styled.div`
   margin-top: 2.5rem;
   padding: 2rem;
@@ -377,7 +400,7 @@ const ResultContainer = styled.div`
 
   p {
     color: #2d3748;
-    margin-bottom: 2rem;
+    margin-bottom: 1rem;
     font-size: 2.5rem;
     font-weight: 800;
     background: linear-gradient(90deg, #4299e1, #63b3ed);
@@ -397,21 +420,26 @@ interface Question {
 interface TestProps {
   questions: Question[];
   timeLimit: number;
-  onComplete: (score: number | null) => void;
+  onComplete: (
+    score: number | null,
+    selectedAnswers: { [key: number]: string }
+  ) => void;
+  onReset: () => void;
   onBack: () => void;
+  savedState?: {
+    score: number | null;
+    selectedAnswers: { [key: number]: string };
+    isSubmitted: boolean;
+  };
 }
 
-// Function to parse and render code blocks
 const renderQuestionWithCode = (text: string) => {
-  // Split the text by code block markers ```
   const parts = text.split(/(```[\s\S]*?```)/);
 
   return parts.map((part, index) => {
-    // Check if this part is a code block
     if (part.startsWith("```") && part.endsWith("```")) {
-      // Extract language and code
       const [firstLine, ...rest] = part.slice(3, -3).split("\n");
-      const language = firstLine.trim() || "javascript"; // Default to javascript if no language specified
+      const language = firstLine.trim() || "javascript";
       const code = rest.join("\n");
 
       return (
@@ -431,7 +459,6 @@ const renderQuestionWithCode = (text: string) => {
         </pre>
       );
     }
-    // For inline code blocks wrapped in single backticks
     const inlineParts = part.split(/(`[^`]+`)/);
     if (inlineParts.length > 1) {
       return (
@@ -464,14 +491,28 @@ const Test: React.FC<TestProps> = ({
   questions,
   timeLimit,
   onComplete,
+  onReset,
   onBack,
+  savedState,
 }) => {
-  const [currentQuestion, setCurrentQuestion] = useState(0);
+  const [currentQuestion, setCurrentQuestion] = useState(() => {
+    if (savedState?.isSubmitted) {
+      const incorrectQuestionIndex = questions.findIndex(
+        (q) => savedState.selectedAnswers[q.id] !== q.correctAnswer
+      );
+      return incorrectQuestionIndex >= 0 ? incorrectQuestionIndex : 0;
+    }
+    return 0;
+  });
   const [selectedAnswers, setSelectedAnswers] = useState<{
     [key: number]: string;
-  }>({});
-  const [timeLeft, setTimeLeft] = useState(timeLimit);
-  const [isSubmitted, setIsSubmitted] = useState(false);
+  }>(savedState?.selectedAnswers || {});
+  const [timeLeft, setTimeLeft] = useState(
+    savedState?.isSubmitted ? 0 : timeLimit
+  );
+  const [isSubmitted, setIsSubmitted] = useState(
+    savedState?.isSubmitted || false
+  );
 
   const formatTime = (seconds: number): string => {
     const hours = Math.floor(seconds / 3600);
@@ -514,10 +555,18 @@ const Test: React.FC<TestProps> = ({
       );
     }, 0);
     const scoreOutOfTen = (rawScore / questions.length) * 10;
-    // Don't navigate back, just show results
+    onComplete(scoreOutOfTen, selectedAnswers);
     setCurrentQuestion(
-      questions.findIndex((q, idx) => selectedAnswers[q.id] !== q.correctAnswer)
+      questions.findIndex((q) => selectedAnswers[q.id] !== q.correctAnswer)
     );
+  };
+
+  const handleReset = () => {
+    setSelectedAnswers({});
+    setIsSubmitted(false);
+    setTimeLeft(timeLimit);
+    setCurrentQuestion(0);
+    onReset();
   };
 
   const currentQuestionData = questions[currentQuestion];
@@ -564,7 +613,6 @@ const Test: React.FC<TestProps> = ({
             showResult={isSubmitted}
             onClick={() => {
               setCurrentQuestion(index);
-              // If submitted, scroll question into view
               if (isSubmitted) {
                 document
                   .querySelector(".question-container")
@@ -662,6 +710,7 @@ const Test: React.FC<TestProps> = ({
             ).toFixed(1)}
             /10
           </p>
+          <ResetButton onClick={handleReset}>Reset Test</ResetButton>
         </ResultContainer>
       )}
     </TestContainer>
