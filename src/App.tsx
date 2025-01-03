@@ -183,7 +183,8 @@ const App: React.FC = () => {
       ) : (
         <Test
           questions={
-            testsData.tests.find((test) => test.id === selectedTest)!.questions
+            testsData.tests.find((test) => test.id === selectedTest)!
+              .questions as any
           }
           timeLimit={
             testsData.tests.find((test) => test.id === selectedTest)!.timeLimit
