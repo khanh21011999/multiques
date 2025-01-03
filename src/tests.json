@@ -4089,6 +4089,2091 @@
           "reason": "Câu A sử dụng window function `ROW_NUMBER()`. Câu C sử dụng correlated subquery để đếm số lượng mức lương lớn hơn. Cần học về window functions và correlated subqueries, cách tìm top N."
         }
       ]
+    },
+    {
+      "id": 8,
+      "title": "Tổng hợp Kiến thức Khoa học Máy tính - Đề 2",
+      "timeLimit": 3600,
+      "questions": [
+        {
+          "id": 1,
+          "question": "Thiết bị nào sau đây hoạt động ở tầng Liên kết dữ liệu (Data Link Layer) của mô hình OSI?",
+          "options": ["Router", "Switch", "Hub", "Repeater"],
+          "correctAnswer": "Switch",
+          "reason": "Switch hoạt động ở tầng Liên kết dữ liệu, sử dụng địa chỉ MAC để chuyển tiếp gói dữ liệu."
+        },
+        {
+          "id": 2,
+          "question": "Thuật toán sắp xếp nào có độ phức tạp thời gian trung bình là O(n log n)?",
+          "options": [
+            "Bubble Sort",
+            "Insertion Sort",
+            "Merge Sort",
+            "Selection Sort"
+          ],
+          "correctAnswer": "Merge Sort",
+          "reason": "Merge Sort sử dụng phương pháp chia để trị và có độ phức tạp thời gian là O(n log n)."
+        },
+        {
+          "id": 3,
+          "question": "Bộ nhớ ảo (Virtual Memory) được sử dụng để làm gì?",
+          "options": [
+            "Tăng tốc độ truy cập bộ nhớ",
+            "Mở rộng dung lượng bộ nhớ RAM",
+            "Lưu trữ dữ liệu tạm thời",
+            "Cung cấp bộ nhớ cache"
+          ],
+          "correctAnswer": "Mở rộng dung lượng bộ nhớ RAM",
+          "reason": "Bộ nhớ ảo sử dụng không gian đĩa để mở rộng bộ nhớ RAM, cho phép chạy các chương trình lớn hơn dung lượng RAM thực tế."
+        },
+        {
+          "id": 4,
+          "question": "Lịch trình nào sau đây ưu tiên các tiến trình có thời gian thực thi ngắn nhất?",
+          "options": ["FCFS", "Round Robin", "SJF", "Priority Scheduling"],
+          "correctAnswer": "SJF",
+          "reason": "SJF (Shortest Job First) ưu tiên các tiến trình có thời gian thực thi ngắn nhất để tối ưu hóa thời gian chờ trung bình."
+        },
+        {
+          "id": 5,
+          "question": "Tính chất nào sau đây không phải là của lập trình hướng đối tượng?",
+          "options": [
+            "Kế thừa (Inheritance)",
+            "Đa hình (Polymorphism)",
+            "Trừu tượng (Abstraction)",
+            "Lập trình hàm (Functional programming)"
+          ],
+          "correctAnswer": "Lập trình hàm (Functional programming)",
+          "reason": "Lập trình hàm là một mô hình lập trình khác, không phải là một tính chất của lập trình hướng đối tượng."
+        },
+        {
+          "id": 6,
+          "question": "Đâu là lỗi cú pháp trong đoạn mã Java sau?\n`public class MyClass {\n public static void main(String args[]) {\n System.out.println(\"Hello\" \n}\n}`",
+          "options": [
+            "Thiếu dấu chấm phẩy ở cuối dòng System.out.println()",
+            "Thiếu dấu ngoặc đơn đóng ở System.out.println()",
+            "Sử dụng sai cú pháp args[]",
+            "Không có lỗi cú pháp"
+          ],
+          "correctAnswer": "Thiếu dấu ngoặc đơn đóng ở System.out.println()",
+          "reason": "Hàm `println` bị thiếu dấu ngoặc đơn đóng `)`. "
+        },
+        {
+          "id": 7,
+          "question": "Câu lệnh SQL nào được sử dụng để lấy dữ liệu từ bảng?",
+          "options": ["INSERT", "UPDATE", "SELECT", "DELETE"],
+          "correctAnswer": "SELECT",
+          "reason": "Câu lệnh SELECT được sử dụng để truy vấn và lấy dữ liệu từ cơ sở dữ liệu."
+        },
+        {
+          "id": 8,
+          "question": "Trong kỹ nghệ phần mềm, mô hình nào phù hợp khi yêu cầu của dự án không rõ ràng và có thể thay đổi?",
+          "options": [
+            "Mô hình thác nước (Waterfall)",
+            "Mô hình xoắn ốc (Spiral)",
+            "Mô hình Agile",
+            "Mô hình V"
+          ],
+          "correctAnswer": "Mô hình Agile",
+          "reason": "Mô hình Agile linh hoạt, cho phép thay đổi yêu cầu trong quá trình phát triển."
+        },
+        {
+          "id": 9,
+          "question": "Công cụ nào thường được sử dụng để quản lý các phiên bản mã nguồn?",
+          "options": ["MS Project", "Git", "Jira", "Trello"],
+          "correctAnswer": "Git",
+          "reason": "Git là một hệ thống quản lý phiên bản phân tán phổ biến."
+        },
+        {
+          "id": 10,
+          "question": "Địa chỉ IP nào là một địa chỉ loopback?",
+          "options": ["192.168.1.1", "10.0.0.1", "127.0.0.1", "172.16.0.1"],
+          "correctAnswer": "127.0.0.1",
+          "reason": "Địa chỉ 127.0.0.1 là địa chỉ loopback, dùng để kiểm tra các kết nối mạng trên máy tính cục bộ."
+        },
+        {
+          "id": 11,
+          "question": "Cấu trúc dữ liệu nào sau đây thường được sử dụng để cài đặt hàng đợi (Queue)?",
+          "options": ["Stack", "Array", "Linked list", "Tree"],
+          "correctAnswer": "Linked list",
+          "reason": "Hàng đợi (Queue) thường được triển khai bằng danh sách liên kết vì nó hỗ trợ hiệu quả các thao tác thêm vào cuối và xóa ở đầu."
+        },
+        {
+          "id": 12,
+          "question": "Phương pháp nào được sử dụng để chuyển địa chỉ logic thành địa chỉ vật lý trong bộ nhớ?",
+          "options": [
+            "Paging",
+            "Caching",
+            "Segmentation",
+            "Translation Lookaside Buffer (TLB)"
+          ],
+          "correctAnswer": "Paging",
+          "reason": "Paging là một phương pháp quản lý bộ nhớ, nó chia không gian nhớ thành các trang có kích thước cố định."
+        },
+        {
+          "id": 13,
+          "question": "Thuật ngữ 'deadlock' (bế tắc) trong hệ điều hành là gì?",
+          "options": [
+            "Tiến trình bị tạm dừng vô hạn",
+            "Tiến trình sử dụng quá nhiều CPU",
+            "Tiến trình hoàn thành công việc",
+            "Tiến trình bị lỗi"
+          ],
+          "correctAnswer": "Tiến trình bị tạm dừng vô hạn",
+          "reason": "Deadlock xảy ra khi hai hoặc nhiều tiến trình chờ đợi tài nguyên mà các tiến trình khác đang nắm giữ, dẫn đến không tiến triển được."
+        },
+        {
+          "id": 14,
+          "question": "Tính chất nào sau đây của OOP cho phép một đối tượng có thể có nhiều hình thức?",
+          "options": [
+            "Đóng gói (Encapsulation)",
+            "Kế thừa (Inheritance)",
+            "Đa hình (Polymorphism)",
+            "Trừu tượng (Abstraction)"
+          ],
+          "correctAnswer": "Đa hình (Polymorphism)",
+          "reason": "Tính đa hình cho phép các đối tượng của các lớp khác nhau phản ứng khác nhau khi cùng một phương thức được gọi."
+        },
+        {
+          "id": 15,
+          "question": "Đâu là lỗi cú pháp trong đoạn mã Java sau:\n`int number = \"10\";`",
+          "options": [
+            "Sử dụng sai kiểu dữ liệu",
+            "Thiếu dấu chấm phẩy",
+            "Sử dụng sai tên biến",
+            "Không có lỗi cú pháp"
+          ],
+          "correctAnswer": "Sử dụng sai kiểu dữ liệu",
+          "reason": "Biến `number` được khai báo là kiểu `int`, nhưng lại được gán giá trị kiểu `String`."
+        },
+        {
+          "id": 16,
+          "question": "Lệnh SQL nào được sử dụng để thêm một cột vào bảng?",
+          "options": [
+            "CREATE TABLE",
+            "ALTER TABLE",
+            "DROP TABLE",
+            "INSERT INTO"
+          ],
+          "correctAnswer": "ALTER TABLE",
+          "reason": "Câu lệnh ALTER TABLE được sử dụng để thay đổi cấu trúc của bảng, bao gồm thêm, xóa, hoặc thay đổi cột."
+        },
+        {
+          "id": 17,
+          "question": "Trong quy trình phát triển phần mềm, kiểm thử nào tập trung vào việc kiểm tra từng đơn vị mã nguồn?",
+          "options": [
+            "Kiểm thử hệ thống",
+            "Kiểm thử tích hợp",
+            "Kiểm thử đơn vị",
+            "Kiểm thử chấp nhận"
+          ],
+          "correctAnswer": "Kiểm thử đơn vị",
+          "reason": "Kiểm thử đơn vị (Unit testing) tập trung vào việc kiểm tra các thành phần nhỏ nhất của phần mềm, thường là các hàm hoặc lớp."
+        },
+        {
+          "id": 18,
+          "question": "Gantt Chart thường được sử dụng trong quản lý dự án để làm gì?",
+          "options": [
+            "Quản lý rủi ro",
+            "Lên lịch trình dự án",
+            "Quản lý chi phí",
+            "Phân công công việc"
+          ],
+          "correctAnswer": "Lên lịch trình dự án",
+          "reason": "Gantt Chart hiển thị lịch trình dự án, bao gồm các công việc, thời gian bắt đầu, thời gian kết thúc, và sự phụ thuộc giữa các công việc."
+        },
+        {
+          "id": 19,
+          "question": "Địa chỉ MAC là gì?",
+          "options": [
+            "Địa chỉ logic của thiết bị",
+            "Địa chỉ vật lý của thiết bị",
+            "Địa chỉ IP của thiết bị",
+            "Địa chỉ cổng của thiết bị"
+          ],
+          "correctAnswer": "Địa chỉ vật lý của thiết bị",
+          "reason": "Địa chỉ MAC là một địa chỉ phần cứng duy nhất được gán cho mỗi thiết bị mạng."
+        },
+        {
+          "id": 20,
+          "question": "Cây nào sau đây được sử dụng để biểu diễn cấu trúc phân cấp?",
+          "options": ["Heap", "Binary Search Tree", "Graph", "Linked list"],
+          "correctAnswer": "Binary Search Tree",
+          "reason": "Cây nhị phân tìm kiếm thường được sử dụng để biểu diễn dữ liệu theo cấu trúc phân cấp, cho phép tìm kiếm, chèn, xóa một cách hiệu quả."
+        },
+        {
+          "id": 21,
+          "question": "Trong kiến trúc máy tính, thuật ngữ 'hit rate' dùng để chỉ điều gì?",
+          "options": [
+            "Tỉ lệ truy cập thành công bộ nhớ cache",
+            "Tỉ lệ truy cập thất bại bộ nhớ cache",
+            "Tỉ lệ lỗi trang",
+            "Tỉ lệ truy cập bộ nhớ chính"
+          ],
+          "correctAnswer": "Tỉ lệ truy cập thành công bộ nhớ cache",
+          "reason": "'Hit rate' đo lường tỉ lệ số lần dữ liệu được tìm thấy trong bộ nhớ cache so với tổng số lần truy cập bộ nhớ."
+        },
+        {
+          "id": 22,
+          "question": "Thuật ngữ 'thrashing' trong hệ điều hành là gì?",
+          "options": [
+            "Hiện tượng trang bị hoán đổi liên tục",
+            "Hiện tượng lỗi trang",
+            "Hiện tượng tắc nghẽn",
+            "Hiện tượng thiếu bộ nhớ"
+          ],
+          "correctAnswer": "Hiện tượng trang bị hoán đổi liên tục",
+          "reason": "Thrashing xảy ra khi hệ thống dành quá nhiều thời gian để hoán đổi các trang bộ nhớ giữa RAM và đĩa, dẫn đến hiệu suất kém."
+        },
+        {
+          "id": 23,
+          "question": "Trong Java, 'interface' là gì?",
+          "options": [
+            "Một lớp trừu tượng",
+            "Một lớp chứa các thuộc tính",
+            "Một bản thiết kế cho lớp",
+            "Một đối tượng"
+          ],
+          "correctAnswer": "Một bản thiết kế cho lớp",
+          "reason": "Interface trong Java định nghĩa các phương thức mà các lớp thực hiện phải tuân theo, là một bản thiết kế cho lớp."
+        },
+        {
+          "id": 24,
+          "question": "Đâu là lỗi cú pháp trong đoạn mã SQL sau:\n `SELECT name FROM users WHERE age = 20`",
+          "options": [
+            "Thiếu dấu chấm phẩy",
+            "Thiếu từ khóa FROM",
+            "Thiếu điều kiện WHERE",
+            "Không có lỗi cú pháp"
+          ],
+          "correctAnswer": "Không có lỗi cú pháp",
+          "reason": "Câu lệnh này hoàn toàn đúng cú pháp SQL."
+        },
+        {
+          "id": 25,
+          "question": "Trong cơ sở dữ liệu, 'foreign key' dùng để làm gì?",
+          "options": [
+            "Khóa chính của bảng",
+            "Khóa ngoài liên kết giữa các bảng",
+            "Một chỉ mục của bảng",
+            "Một ràng buộc trên cột"
+          ],
+          "correctAnswer": "Khóa ngoài liên kết giữa các bảng",
+          "reason": "Khóa ngoại (foreign key) thiết lập mối quan hệ giữa các bảng, đảm bảo tính toàn vẹn tham chiếu."
+        },
+        {
+          "id": 26,
+          "question": "Trong kiểm thử phần mềm, kiểm thử hộp đen (black box testing) là gì?",
+          "options": [
+            "Kiểm thử dựa vào cấu trúc bên trong của mã",
+            "Kiểm thử dựa vào đặc tả yêu cầu",
+            "Kiểm thử tất cả các trường hợp",
+            "Kiểm thử bởi người dùng cuối"
+          ],
+          "correctAnswer": "Kiểm thử dựa vào đặc tả yêu cầu",
+          "reason": "Kiểm thử hộp đen chỉ tập trung vào chức năng của phần mềm, không cần biết đến cấu trúc bên trong."
+        },
+        {
+          "id": 27,
+          "question": "'Scope creep' trong quản lý dự án là gì?",
+          "options": [
+            "Sự chậm trễ của dự án",
+            "Chi phí dự án tăng cao",
+            "Sự thay đổi không kiểm soát của phạm vi dự án",
+            "Rủi ro của dự án tăng lên"
+          ],
+          "correctAnswer": "Sự thay đổi không kiểm soát của phạm vi dự án",
+          "reason": "'Scope creep' là tình trạng phạm vi dự án liên tục thay đổi, phát sinh thêm yêu cầu mới ngoài kế hoạch ban đầu."
+        },
+        {
+          "id": 28,
+          "question": "Giao thức nào được sử dụng để gửi email?",
+          "options": ["HTTP", "FTP", "SMTP", "DNS"],
+          "correctAnswer": "SMTP",
+          "reason": "SMTP (Simple Mail Transfer Protocol) được sử dụng để gửi email."
+        },
+        {
+          "id": 29,
+          "question": "Thuật toán sắp xếp nào thường được sử dụng trong thực tế vì hiệu quả và tính ổn định của nó?",
+          "options": [
+            "Bubble sort",
+            "Insertion Sort",
+            "Merge Sort",
+            "Selection Sort"
+          ],
+          "correctAnswer": "Merge Sort",
+          "reason": "Merge Sort là một thuật toán sắp xếp hiệu quả và ổn định, thường được sử dụng trong thực tế."
+        },
+        {
+          "id": 30,
+          "question": "Trong Java, từ khóa `static` có nghĩa là gì?",
+          "options": [
+            "Một biến thuộc về đối tượng",
+            "Một biến thuộc về lớp",
+            "Một phương thức thuộc về đối tượng",
+            "Một phương thức thuộc về một interface"
+          ],
+          "correctAnswer": "Một biến thuộc về lớp",
+          "reason": "Trong Java, khi một biến hoặc phương thức được khai báo `static`, nó thuộc về lớp chứ không phải đối tượng."
+        }
+      ]
+    },
+    {
+      "id": 9,
+      "title": "Tổng hợp Kiến thức Khoa học Máy tính - Đề 3",
+      "timeLimit": 3600,
+      "questions": [
+        {
+          "id": 1,
+          "question": "Giao thức nào sau đây hoạt động ở tầng Vận tải (Transport Layer) của mô hình OSI?",
+          "options": ["IP", "TCP", "HTTP", "DNS"],
+          "correctAnswer": "TCP",
+          "reason": "TCP (Transmission Control Protocol) hoạt động ở tầng Vận tải, đảm bảo truyền dữ liệu tin cậy."
+        },
+        {
+          "id": 2,
+          "question": "Cấu trúc dữ liệu nào sau đây hoạt động theo nguyên tắc FIFO (First In, First Out)?",
+          "options": ["Stack", "Queue", "Linked List", "Tree"],
+          "correctAnswer": "Queue",
+          "reason": "Queue hoạt động theo nguyên tắc FIFO, phần tử được thêm vào trước sẽ là phần tử được lấy ra trước."
+        },
+        {
+          "id": 3,
+          "question": "Bộ nhớ RAM là loại bộ nhớ gì?",
+          "options": [
+            "Bộ nhớ chỉ đọc (ROM)",
+            "Bộ nhớ truy cập ngẫu nhiên (RAM)",
+            "Bộ nhớ thứ cấp",
+            "Bộ nhớ cache"
+          ],
+          "correctAnswer": "Bộ nhớ truy cập ngẫu nhiên (RAM)",
+          "reason": "RAM (Random Access Memory) là bộ nhớ chính, có thể truy cập ngẫu nhiên và có tính chất tạm thời."
+        },
+        {
+          "id": 4,
+          "question": "Thuật toán lập lịch 'Round Robin' hoạt động như thế nào?",
+          "options": [
+            "Ưu tiên tiến trình đến trước",
+            "Ưu tiên tiến trình có thời gian thực thi ngắn nhất",
+            "Chia đều thời gian CPU cho các tiến trình",
+            "Ưu tiên tiến trình có độ ưu tiên cao nhất"
+          ],
+          "correctAnswer": "Chia đều thời gian CPU cho các tiến trình",
+          "reason": "Round Robin chia đều thời gian CPU cho các tiến trình trong một khoảng thời gian cố định."
+        },
+        {
+          "id": 5,
+          "question": "Khái niệm 'encapsulation' (đóng gói) trong lập trình hướng đối tượng là gì?",
+          "options": [
+            "Che giấu dữ liệu và phương thức của đối tượng",
+            "Cho phép đối tượng được sử dụng lại",
+            "Tạo ra nhiều đối tượng",
+            "Phân chia chương trình thành các phần nhỏ"
+          ],
+          "correctAnswer": "Che giấu dữ liệu và phương thức của đối tượng",
+          "reason": "Encapsulation là việc đóng gói dữ liệu và phương thức vào trong một đối tượng, đồng thời giới hạn truy cập từ bên ngoài."
+        },
+        {
+          "id": 6,
+          "question": "Đâu là lỗi cú pháp trong đoạn mã Java sau:\n`String message = 123;`",
+          "options": [
+            "Sử dụng sai kiểu dữ liệu",
+            "Thiếu dấu chấm phẩy",
+            "Sử dụng sai tên biến",
+            "Không có lỗi cú pháp"
+          ],
+          "correctAnswer": "Sử dụng sai kiểu dữ liệu",
+          "reason": "Biến `message` được khai báo là kiểu `String`, nhưng lại được gán giá trị kiểu `int`."
+        },
+        {
+          "id": 7,
+          "question": "Câu lệnh SQL nào dùng để xóa dữ liệu từ bảng?",
+          "options": ["INSERT", "UPDATE", "SELECT", "DELETE"],
+          "correctAnswer": "DELETE",
+          "reason": "Câu lệnh DELETE dùng để xóa dữ liệu từ bảng."
+        },
+        {
+          "id": 8,
+          "question": "Mô hình phát triển phần mềm nào tập trung vào việc phân tích và thiết kế chi tiết trước khi bắt đầu viết code?",
+          "options": [
+            "Mô hình Agile",
+            "Mô hình xoắn ốc",
+            "Mô hình thác nước",
+            "Mô hình V"
+          ],
+          "correctAnswer": "Mô hình thác nước",
+          "reason": "Mô hình thác nước (Waterfall) là mô hình tuần tự, đi từ phân tích, thiết kế đến triển khai và kiểm thử."
+        },
+        {
+          "id": 9,
+          "question": "Công cụ nào được sử dụng để theo dõi và quản lý các lỗi (bug) trong quá trình phát triển phần mềm?",
+          "options": ["Git", "Jira", "MS Project", "Trello"],
+          "correctAnswer": "Jira",
+          "reason": "Jira là một công cụ quản lý dự án và theo dõi lỗi phổ biến."
+        },
+        {
+          "id": 10,
+          "question": "Địa chỉ nào là địa chỉ Broadcast trong IPv4?",
+          "options": [
+            "192.168.1.0",
+            "192.168.1.255",
+            "192.168.1.1",
+            "255.255.255.0"
+          ],
+          "correctAnswer": "192.168.1.255",
+          "reason": "Địa chỉ broadcast thường có tất cả các bit host là 1."
+        },
+        {
+          "id": 11,
+          "question": "Thuật toán nào được dùng để duyệt cây theo chiều sâu?",
+          "options": [
+            "Breadth-First Search",
+            "Depth-First Search",
+            "Binary Search",
+            "Linear Search"
+          ],
+          "correctAnswer": "Depth-First Search",
+          "reason": "Depth-First Search (DFS) duyệt theo chiều sâu bằng cách đi đến con của một nút trước khi duyệt các nút cùng cấp."
+        },
+        {
+          "id": 12,
+          "question": "Trong kiến trúc máy tính, TLB là viết tắt của từ nào?",
+          "options": [
+            "Translation Lookaside Buffer",
+            "Temporary Local Bus",
+            "Time Local Buffer",
+            "Transfer Logic Block"
+          ],
+          "correctAnswer": "Translation Lookaside Buffer",
+          "reason": "TLB (Translation Lookaside Buffer) là một bộ nhớ cache đặc biệt dùng để tăng tốc độ chuyển đổi giữa địa chỉ ảo và địa chỉ vật lý."
+        },
+        {
+          "id": 13,
+          "question": "Thuật ngữ 'context switching' trong hệ điều hành nghĩa là gì?",
+          "options": [
+            "Chuyển đổi giữa các tiến trình",
+            "Chuyển đổi giữa các luồng",
+            "Chuyển đổi giữa các ổ đĩa",
+            "Chuyển đổi giữa các bộ nhớ"
+          ],
+          "correctAnswer": "Chuyển đổi giữa các tiến trình",
+          "reason": "Context switching là quá trình lưu trữ và khôi phục trạng thái của một tiến trình để chuyển sang tiến trình khác."
+        },
+        {
+          "id": 14,
+          "question": "Trong OOP, tính 'kế thừa' (Inheritance) cho phép làm gì?",
+          "options": [
+            "Tạo ra các đối tượng mới",
+            "Truy cập vào các biến của lớp khác",
+            "Một lớp kế thừa các thuộc tính và phương thức của một lớp khác",
+            "Đóng gói dữ liệu"
+          ],
+          "correctAnswer": "Một lớp kế thừa các thuộc tính và phương thức của một lớp khác",
+          "reason": "Inheritance cho phép một lớp (lớp con) kế thừa các thuộc tính và phương thức từ lớp khác (lớp cha), tái sử dụng code và thiết lập quan hệ phân cấp."
+        },
+        {
+          "id": 15,
+          "question": "Đâu là lỗi cú pháp trong đoạn mã Java sau:\n`int x = 10.5;`",
+          "options": [
+            "Sử dụng sai kiểu dữ liệu",
+            "Thiếu dấu chấm phẩy",
+            "Sử dụng sai tên biến",
+            "Không có lỗi cú pháp"
+          ],
+          "correctAnswer": "Sử dụng sai kiểu dữ liệu",
+          "reason": "Biến `x` được khai báo là kiểu `int`, nhưng lại được gán giá trị kiểu `double`."
+        },
+        {
+          "id": 16,
+          "question": "Lệnh SQL nào dùng để tạo một bảng mới?",
+          "options": [
+            "INSERT TABLE",
+            "CREATE TABLE",
+            "ALTER TABLE",
+            "DROP TABLE"
+          ],
+          "correctAnswer": "CREATE TABLE",
+          "reason": "Câu lệnh CREATE TABLE được sử dụng để tạo một bảng mới trong cơ sở dữ liệu."
+        },
+        {
+          "id": 17,
+          "question": "Trong kiểm thử phần mềm, kiểm thử tích hợp là gì?",
+          "options": [
+            "Kiểm thử từng đơn vị mã",
+            "Kiểm thử các thành phần kết hợp với nhau",
+            "Kiểm thử toàn bộ hệ thống",
+            "Kiểm thử bởi người dùng"
+          ],
+          "correctAnswer": "Kiểm thử các thành phần kết hợp với nhau",
+          "reason": "Kiểm thử tích hợp (Integration testing) kiểm tra sự tương tác giữa các thành phần của phần mềm."
+        },
+        {
+          "id": 18,
+          "question": "'Critical path' trong quản lý dự án là gì?",
+          "options": [
+            "Đường đi ngắn nhất của dự án",
+            "Đường đi quan trọng nhất của dự án",
+            "Đường đi có nhiều rủi ro",
+            "Đường đi dự phòng của dự án"
+          ],
+          "correctAnswer": "Đường đi quan trọng nhất của dự án",
+          "reason": "Đường găng (Critical path) là đường đi dài nhất qua các công việc của dự án, quyết định thời gian hoàn thành dự án."
+        },
+        {
+          "id": 19,
+          "question": "DNS là gì?",
+          "options": [
+            "Giao thức truyền file",
+            "Giao thức định tuyến",
+            "Hệ thống phân giải tên miền",
+            "Giao thức gửi email"
+          ],
+          "correctAnswer": "Hệ thống phân giải tên miền",
+          "reason": "DNS (Domain Name System) là hệ thống phân giải tên miền thành địa chỉ IP."
+        },
+        {
+          "id": 20,
+          "question": "Cấu trúc dữ liệu nào phù hợp để biểu diễn mối quan hệ đa-đa?",
+          "options": ["Cây", "Đồ thị", "Stack", "Queue"],
+          "correctAnswer": "Đồ thị",
+          "reason": "Đồ thị (Graph) cho phép biểu diễn các mối quan hệ phức tạp giữa các đối tượng, bao gồm mối quan hệ đa-đa."
+        },
+        {
+          "id": 21,
+          "question": "Trong kiến trúc máy tính, 'cache coherence' nghĩa là gì?",
+          "options": [
+            "Sự đồng bộ dữ liệu giữa các bộ nhớ cache",
+            "Sự không đồng bộ dữ liệu giữa các bộ nhớ cache",
+            "Tốc độ của bộ nhớ cache",
+            "Dung lượng của bộ nhớ cache"
+          ],
+          "correctAnswer": "Sự đồng bộ dữ liệu giữa các bộ nhớ cache",
+          "reason": "Cache coherence đảm bảo rằng tất cả các bản sao của một khối dữ liệu trong các bộ nhớ cache khác nhau đều được đồng bộ."
+        },
+        {
+          "id": 22,
+          "question": "'Page fault' trong hệ điều hành là gì?",
+          "options": [
+            "Lỗi truy cập bộ nhớ cache",
+            "Lỗi trang khi truy cập bộ nhớ ảo",
+            "Lỗi truy cập vào một file",
+            "Lỗi do thiếu bộ nhớ"
+          ],
+          "correctAnswer": "Lỗi trang khi truy cập bộ nhớ ảo",
+          "reason": "Page fault xảy ra khi hệ điều hành không tìm thấy trang trong bộ nhớ chính mà phải nạp từ bộ nhớ phụ."
+        },
+        {
+          "id": 23,
+          "question": "Trong Java, từ khóa `final` có nghĩa là gì?",
+          "options": [
+            "Một biến không thể thay đổi giá trị",
+            "Một phương thức không thể kế thừa",
+            "Một lớp không thể kế thừa",
+            "Một biến thuộc về lớp"
+          ],
+          "correctAnswer": "Một biến không thể thay đổi giá trị",
+          "reason": "Khi biến được khai báo là `final`, nó là một hằng số và không thể thay đổi giá trị sau khi được gán."
+        },
+        {
+          "id": 24,
+          "question": "Đâu là lỗi cú pháp trong đoạn mã SQL sau:\n`INSERT INTO users (name, age) VALUE (\"John\", 30)`",
+          "options": [
+            "Thiếu dấu chấm phẩy",
+            "Sai từ khóa VALUE",
+            "Thiếu dấu ngoặc tròn",
+            "Không có lỗi cú pháp"
+          ],
+          "correctAnswer": "Sai từ khóa VALUE",
+          "reason": "Từ khóa phải là `VALUES` (số nhiều)."
+        },
+        {
+          "id": 25,
+          "question": "Trong cơ sở dữ liệu, 'index' (chỉ mục) có tác dụng gì?",
+          "options": [
+            "Tăng tốc độ truy vấn",
+            "Giảm dung lượng lưu trữ",
+            "Tăng độ phức tạp của truy vấn",
+            "Giảm tính toàn vẹn dữ liệu"
+          ],
+          "correctAnswer": "Tăng tốc độ truy vấn",
+          "reason": "Index giúp tăng tốc độ truy vấn bằng cách tạo ra một cấu trúc dữ liệu để tìm kiếm nhanh chóng."
+        },
+        {
+          "id": 26,
+          "question": "Trong kiểm thử phần mềm, kiểm thử hồi quy (regression testing) dùng để làm gì?",
+          "options": [
+            "Kiểm thử chức năng mới",
+            "Kiểm thử các lỗi đã sửa",
+            "Kiểm thử toàn bộ hệ thống",
+            "Đảm bảo các thay đổi không gây ra lỗi mới"
+          ],
+          "correctAnswer": "Đảm bảo các thay đổi không gây ra lỗi mới",
+          "reason": "Kiểm thử hồi quy (Regression testing) kiểm tra xem các thay đổi mới không làm ảnh hưởng đến các chức năng cũ."
+        },
+        {
+          "id": 27,
+          "question": "'Risk management' (quản lý rủi ro) trong quản lý dự án có vai trò gì?",
+          "options": [
+            "Xác định và phân tích rủi ro",
+            "Phân công công việc",
+            "Lên kế hoạch chi phí",
+            "Đảm bảo dự án thành công"
+          ],
+          "correctAnswer": "Xác định và phân tích rủi ro",
+          "reason": "Quản lý rủi ro là quá trình xác định, phân tích, và đưa ra các biện pháp đối phó với các rủi ro tiềm ẩn."
+        },
+        {
+          "id": 28,
+          "question": "Giao thức nào dùng để truy cập website?",
+          "options": ["FTP", "SMTP", "HTTP", "DNS"],
+          "correctAnswer": "HTTP",
+          "reason": "HTTP (Hypertext Transfer Protocol) là giao thức dùng để truyền tải dữ liệu giữa client và server trên web."
+        },
+        {
+          "id": 29,
+          "question": "Độ phức tạp thời gian tốt nhất của thuật toán sắp xếp 'Insertion Sort' là bao nhiêu?",
+          "options": ["O(n)", "O(n log n)", "O(n^2)", "O(log n)"],
+          "correctAnswer": "O(n)",
+          "reason": "Trường hợp tốt nhất của Insertion Sort (khi mảng đã sắp xếp) là O(n)."
+        },
+        {
+          "id": 30,
+          "question": "Trong Java, từ khóa `this` được dùng để làm gì?",
+          "options": [
+            "Tham chiếu đến đối tượng hiện tại",
+            "Tham chiếu đến lớp cha",
+            "Tham chiếu đến biến toàn cục",
+            "Tham chiếu đến biến địa phương"
+          ],
+          "correctAnswer": "Tham chiếu đến đối tượng hiện tại",
+          "reason": "Từ khóa `this` trong Java tham chiếu đến đối tượng hiện tại mà phương thức đang được gọi."
+        }
+      ]
+    },
+    {
+      "id": 10,
+      "title": "Tổng hợp Kiến thức Khoa học Máy tính - Đề 4",
+      "timeLimit": 3600,
+      "questions": [
+        {
+          "id": 1,
+          "question": "Giao thức nào được sử dụng để truyền file?",
+          "options": ["HTTP", "FTP", "SMTP", "DNS"],
+          "correctAnswer": "FTP",
+          "reason": "FTP (File Transfer Protocol) được sử dụng để truyền tải các tập tin giữa máy tính."
+        },
+        {
+          "id": 2,
+          "question": "Độ phức tạp thời gian của thuật toán tìm kiếm tuyến tính (Linear Search) là bao nhiêu?",
+          "options": ["O(1)", "O(log n)", "O(n)", "O(n^2)"],
+          "correctAnswer": "O(n)",
+          "reason": "Tìm kiếm tuyến tính duyệt qua từng phần tử, nên độ phức tạp là tuyến tính."
+        },
+        {
+          "id": 3,
+          "question": "Trong kiến trúc máy tính, bộ nhớ ROM dùng để làm gì?",
+          "options": [
+            "Lưu trữ dữ liệu tạm thời",
+            "Lưu trữ chương trình khởi động",
+            "Lưu trữ dữ liệu của người dùng",
+            "Tăng tốc độ CPU"
+          ],
+          "correctAnswer": "Lưu trữ chương trình khởi động",
+          "reason": "ROM (Read-Only Memory) được sử dụng để lưu trữ chương trình khởi động (BIOS) và các thông tin cơ bản khác."
+        },
+        {
+          "id": 4,
+          "question": "Trong hệ điều hành, 'paging' là gì?",
+          "options": [
+            "Một kỹ thuật quản lý bộ nhớ",
+            "Một kỹ thuật lập lịch tiến trình",
+            "Một kỹ thuật ảo hóa bộ nhớ",
+            "Một kỹ thuật đồng bộ hóa"
+          ],
+          "correctAnswer": "Một kỹ thuật quản lý bộ nhớ",
+          "reason": "Paging là kỹ thuật chia bộ nhớ thành các trang có kích thước bằng nhau để quản lý bộ nhớ."
+        },
+        {
+          "id": 5,
+          "question": "Trong OOP, 'abstraction' (trừu tượng) là gì?",
+          "options": [
+            "Ẩn chi tiết triển khai",
+            "Tạo ra các đối tượng mới",
+            "Đóng gói dữ liệu",
+            "Kế thừa các thuộc tính"
+          ],
+          "correctAnswer": "Ẩn chi tiết triển khai",
+          "reason": "Abstraction là việc ẩn chi tiết triển khai phức tạp, chỉ cho phép người dùng tương tác với giao diện đơn giản."
+        },
+        {
+          "id": 6,
+          "question": "Đâu là lỗi cú pháp trong đoạn mã Java sau:\n`if x = 10 {`",
+          "options": [
+            "Thiếu dấu ngoặc đơn",
+            "Sử dụng sai dấu so sánh",
+            "Thiếu dấu chấm phẩy",
+            "Không có lỗi cú pháp"
+          ],
+          "correctAnswer": "Sử dụng sai dấu so sánh",
+          "reason": "Trong Java, dấu so sánh bằng là `==`, không phải `=`."
+        },
+        {
+          "id": 7,
+          "question": "Câu lệnh SQL nào được sử dụng để cập nhật dữ liệu trong bảng?",
+          "options": ["INSERT", "UPDATE", "SELECT", "DELETE"],
+          "correctAnswer": "UPDATE",
+          "reason": "Câu lệnh UPDATE được sử dụng để thay đổi dữ liệu đã có trong bảng."
+        },
+        {
+          "id": 8,
+          "question": "Trong mô hình phát triển phần mềm, 'Sprint' thường được sử dụng trong mô hình nào?",
+          "options": [
+            "Mô hình thác nước",
+            "Mô hình xoắn ốc",
+            "Mô hình Agile",
+            "Mô hình V"
+          ],
+          "correctAnswer": "Mô hình Agile",
+          "reason": "Sprint là một vòng lặp phát triển ngắn hạn trong mô hình Agile."
+        },
+        {
+          "id": 9,
+          "question": "Trong quản lý dự án, 'WBS' là gì?",
+          "options": [
+            "Work Breakdown Structure",
+            "Workflow Building System",
+            "Web Based System",
+            "Wide Band System"
+          ],
+          "correctAnswer": "Work Breakdown Structure",
+          "reason": "WBS (Work Breakdown Structure) là phương pháp phân chia dự án thành các phần nhỏ hơn, dễ quản lý hơn."
+        },
+        {
+          "id": 10,
+          "question": "Địa chỉ nào là địa chỉ lớp B trong IPv4?",
+          "options": ["10.0.0.1", "172.16.0.1", "192.168.1.1", "224.0.0.1"],
+          "correctAnswer": "172.16.0.1",
+          "reason": "Địa chỉ lớp B có octet đầu tiên từ 128 đến 191."
+        },
+        {
+          "id": 11,
+          "question": "Cây nào sau đây có thể bị lệch (skewed tree) trong trường hợp xấu nhất?",
+          "options": [
+            "Cây AVL",
+            "Cây nhị phân tìm kiếm (Binary Search Tree)",
+            "Cây B",
+            "Cây đỏ đen (Red-Black Tree)"
+          ],
+          "correctAnswer": "Cây nhị phân tìm kiếm (Binary Search Tree)",
+          "reason": "Cây nhị phân tìm kiếm có thể trở thành cây lệch trong trường hợp các nút được chèn vào theo thứ tự tăng hoặc giảm dần."
+        },
+        {
+          "id": 12,
+          "question": "Trong kiến trúc máy tính, DMA là gì?",
+          "options": [
+            "Direct Memory Access",
+            "Dynamic Memory Allocation",
+            "Data Management Array",
+            "Dual Mode Access"
+          ],
+          "correctAnswer": "Direct Memory Access",
+          "reason": "DMA (Direct Memory Access) cho phép các thiết bị ngoại vi truy cập trực tiếp vào bộ nhớ mà không cần sự can thiệp của CPU."
+        },
+        {
+          "id": 13,
+          "question": "Thuật ngữ 'starvation' trong hệ điều hành có nghĩa là gì?",
+          "options": [
+            "Một tiến trình chiếm quá nhiều CPU",
+            "Một tiến trình không được cấp tài nguyên",
+            "Một tiến trình bị lỗi",
+            "Một tiến trình bị treo"
+          ],
+          "correctAnswer": "Một tiến trình không được cấp tài nguyên",
+          "reason": "Starvation xảy ra khi một tiến trình liên tục bị từ chối tài nguyên cần thiết để thực thi."
+        },
+        {
+          "id": 14,
+          "question": "Trong OOP, 'polymorphism' (đa hình) nghĩa là gì?",
+          "options": [
+            "Khả năng đóng gói dữ liệu",
+            "Khả năng kế thừa thuộc tính",
+            "Khả năng một đối tượng có nhiều hình thức",
+            "Khả năng trừu tượng hóa dữ liệu"
+          ],
+          "correctAnswer": "Khả năng một đối tượng có nhiều hình thức",
+          "reason": "Polymorphism cho phép một đối tượng có thể có nhiều hình thức, tùy thuộc vào lớp con kế thừa."
+        },
+        {
+          "id": 15,
+          "question": "Đâu là lỗi cú pháp trong đoạn mã Java sau:\n`for (int i = 0; i < 10;) {`",
+          "options": [
+            "Thiếu phần tăng biến",
+            "Thiếu dấu chấm phẩy ở vòng lặp",
+            "Sai cú pháp vòng lặp",
+            "Không có lỗi cú pháp"
+          ],
+          "correctAnswer": "Thiếu phần tăng biến",
+          "reason": "Vòng lặp `for` cần có đầy đủ 3 phần: khởi tạo, điều kiện, và tăng biến."
+        },
+        {
+          "id": 16,
+          "question": "Câu lệnh SQL nào dùng để xóa một bảng?",
+          "options": [
+            "DELETE TABLE",
+            "DROP TABLE",
+            "REMOVE TABLE",
+            "ALTER TABLE"
+          ],
+          "correctAnswer": "DROP TABLE",
+          "reason": "Câu lệnh DROP TABLE dùng để xóa toàn bộ bảng, bao gồm cả cấu trúc và dữ liệu."
+        },
+        {
+          "id": 17,
+          "question": "Trong kiểm thử phần mềm, kiểm thử hiệu năng (performance testing) dùng để làm gì?",
+          "options": [
+            "Kiểm tra chức năng",
+            "Kiểm tra tốc độ và độ ổn định",
+            "Kiểm tra giao diện",
+            "Kiểm tra tính bảo mật"
+          ],
+          "correctAnswer": "Kiểm tra tốc độ và độ ổn định",
+          "reason": "Kiểm thử hiệu năng (Performance testing) đo lường tốc độ và độ ổn định của hệ thống dưới các tải khác nhau."
+        },
+        {
+          "id": 18,
+          "question": "'Risk mitigation' (giảm thiểu rủi ro) trong quản lý dự án có nghĩa là gì?",
+          "options": [
+            "Tránh hoàn toàn rủi ro",
+            "Chấp nhận rủi ro",
+            "Giảm thiểu tác động của rủi ro",
+            "Chuyển giao rủi ro"
+          ],
+          "correctAnswer": "Giảm thiểu tác động của rủi ro",
+          "reason": "Giảm thiểu rủi ro (Risk mitigation) là việc thực hiện các biện pháp để giảm khả năng xảy ra hoặc tác động của rủi ro."
+        },
+        {
+          "id": 19,
+          "question": "NAT (Network Address Translation) là gì?",
+          "options": [
+            "Một giao thức định tuyến",
+            "Một giao thức bảo mật",
+            "Một phương pháp ánh xạ địa chỉ",
+            "Một giao thức truyền tải dữ liệu"
+          ],
+          "correctAnswer": "Một phương pháp ánh xạ địa chỉ",
+          "reason": "NAT (Network Address Translation) là phương pháp ánh xạ địa chỉ IP riêng sang địa chỉ IP công cộng."
+        },
+        {
+          "id": 20,
+          "question": "Cấu trúc dữ liệu nào được sử dụng để cài đặt bảng băm (hash table)?",
+          "options": ["Linked List", "Tree", "Array", "Queue"],
+          "correctAnswer": "Array",
+          "reason": "Bảng băm (hash table) thường sử dụng mảng (array) để lưu trữ dữ liệu và sử dụng hàm băm để ánh xạ khóa đến vị trí trong mảng."
+        },
+        {
+          "id": 21,
+          "question": "Trong kiến trúc máy tính, 'locality of reference' nghĩa là gì?",
+          "options": [
+            "Dữ liệu được truy cập theo thứ tự",
+            "Dữ liệu được truy cập ngẫu nhiên",
+            "Dữ liệu có xu hướng tập trung",
+            "Dữ liệu được lưu trữ gần CPU"
+          ],
+          "correctAnswer": "Dữ liệu có xu hướng tập trung",
+          "reason": "Locality of reference là nguyên tắc mà chương trình có xu hướng truy cập các vùng dữ liệu gần nhau trong một khoảng thời gian ngắn."
+        },
+        {
+          "id": 22,
+          "question": "'Swapping' trong hệ điều hành là gì?",
+          "options": [
+            "Chuyển dữ liệu giữa bộ nhớ chính và bộ nhớ cache",
+            "Chuyển dữ liệu giữa bộ nhớ chính và bộ nhớ ảo",
+            "Chuyển dữ liệu giữa các tiến trình",
+            "Chuyển dữ liệu giữa CPU và bộ nhớ"
+          ],
+          "correctAnswer": "Chuyển dữ liệu giữa bộ nhớ chính và bộ nhớ ảo",
+          "reason": "Swapping là việc chuyển một tiến trình đang không hoạt động từ bộ nhớ chính sang bộ nhớ ảo."
+        },
+        {
+          "id": 23,
+          "question": "Trong Java, từ khóa `super` được dùng để làm gì?",
+          "options": [
+            "Tham chiếu đến đối tượng hiện tại",
+            "Tham chiếu đến lớp cha",
+            "Tham chiếu đến một biến static",
+            "Tạo ra một đối tượng mới"
+          ],
+          "correctAnswer": "Tham chiếu đến lớp cha",
+          "reason": "Từ khóa `super` trong Java được dùng để tham chiếu đến các thuộc tính và phương thức của lớp cha."
+        },
+        {
+          "id": 24,
+          "question": "Đâu là lỗi cú pháp trong đoạn mã SQL sau:\n`SELECT name, age FORM users;`",
+          "options": [
+            "Thiếu từ khóa WHERE",
+            "Sai từ khóa FORM",
+            "Thiếu dấu chấm phẩy",
+            "Không có lỗi cú pháp"
+          ],
+          "correctAnswer": "Sai từ khóa FORM",
+          "reason": "Từ khóa phải là `FROM`."
+        },
+        {
+          "id": 25,
+          "question": "Trong cơ sở dữ liệu, 'normalization' (chuẩn hóa) có mục đích gì?",
+          "options": [
+            "Tăng tốc độ truy vấn",
+            "Giảm sự dư thừa dữ liệu",
+            "Tăng độ phức tạp của truy vấn",
+            "Giảm tính bảo mật"
+          ],
+          "correctAnswer": "Giảm sự dư thừa dữ liệu",
+          "reason": "Normalization là quá trình tổ chức dữ liệu trong cơ sở dữ liệu để giảm sự dư thừa và đảm bảo tính toàn vẹn."
+        },
+        {
+          "id": 26,
+          "question": "Trong kiểm thử phần mềm, 'alpha testing' là gì?",
+          "options": [
+            "Kiểm thử bởi người dùng cuối",
+            "Kiểm thử bởi nhà phát triển",
+            "Kiểm thử tại môi trường của khách hàng",
+            "Kiểm thử các chức năng mới"
+          ],
+          "correctAnswer": "Kiểm thử bởi nhà phát triển",
+          "reason": "Alpha testing thường được thực hiện bởi đội ngũ phát triển để phát hiện các lỗi trước khi release cho khách hàng."
+        },
+        {
+          "id": 27,
+          "question": "'Project charter' (điều lệ dự án) có vai trò gì trong quản lý dự án?",
+          "options": [
+            "Xác định phạm vi dự án",
+            "Lên kế hoạch chi tiết",
+            "Phân công công việc",
+            "Cung cấp thông tin cơ bản về dự án"
+          ],
+          "correctAnswer": "Cung cấp thông tin cơ bản về dự án",
+          "reason": "Project charter cung cấp thông tin tổng quan về mục tiêu, phạm vi, các bên liên quan, và các thông tin quan trọng khác của dự án."
+        },
+        {
+          "id": 28,
+          "question": "Giao thức nào dùng để phân giải tên miền thành địa chỉ IP?",
+          "options": ["HTTP", "SMTP", "DNS", "FTP"],
+          "correctAnswer": "DNS",
+          "reason": "DNS (Domain Name System) phân giải tên miền thành địa chỉ IP."
+        },
+        {
+          "id": 29,
+          "question": "Thuật toán sắp xếp nào có độ phức tạp thời gian trung bình là O(n^2)?",
+          "options": ["Merge Sort", "Quick Sort", "Bubble Sort", "Heap Sort"],
+          "correctAnswer": "Bubble Sort",
+          "reason": "Bubble Sort có độ phức tạp thời gian trung bình là O(n^2)."
+        },
+        {
+          "id": 30,
+          "question": "Trong Java, từ khóa `abstract` được dùng để làm gì?",
+          "options": [
+            "Tạo ra một đối tượng mới",
+            "Định nghĩa một phương thức không có nội dung",
+            "Khai báo một biến không thể thay đổi",
+            "Định nghĩa một lớp có thể được kế thừa"
+          ],
+          "correctAnswer": "Định nghĩa một phương thức không có nội dung",
+          "reason": "Từ khóa `abstract` được sử dụng để khai báo một lớp hoặc phương thức trừu tượng (không có nội dung)."
+        }
+      ]
+    },
+    {
+      "id": 11,
+      "title": "Bài Kiểm Tra Cú Pháp Java Chuyên Sâu",
+      "timeLimit": 3600,
+      "questions": [
+        {
+          "id": 1,
+          "question": "Những cách nào sau đây khai báo đúng một biến kiểu `long` và gán giá trị?",
+          "options": [
+            "long num = 10;",
+            "long num = 10L;",
+            "Long num = 10;",
+            "Long num = 10l;"
+          ],
+          "correctAnswer": ["long num = 10L;", "Long num = 10l;"],
+          "reason": "Để khai báo biến long, cần thêm 'L' hoặc 'l' ở cuối giá trị để chỉ định kiểu long. 'long num = 10' sẽ gây lỗi vì mặc định là kiểu int, trong khi `Long num = 10;` bị lỗi compile vì gán primitive int cho Wrapper object"
+        },
+        {
+          "id": 2,
+          "question": "Đâu là lỗi trong đoạn code sau? `char c = 'ab';`",
+          "options": [
+            "Lỗi ép kiểu",
+            "Lỗi cú pháp",
+            "Lỗi logic",
+            "Không có lỗi"
+          ],
+          "correctAnswer": ["Lỗi cú pháp"],
+          "reason": "Kiểu `char` chỉ chứa một ký tự. Để chứa một chuỗi, phải dùng kiểu `String`. Đây là lỗi cú pháp."
+        },
+        {
+          "id": 3,
+          "question": "Trong Java, cách nào khai báo đúng một biến boolean?",
+          "options": [
+            "boolean flag = 0;",
+            "boolean flag = 'true';",
+            "boolean flag = true;",
+            "Boolean flag = true;"
+          ],
+          "correctAnswer": ["boolean flag = true;", "Boolean flag = true;"],
+          "reason": "Kiểu `boolean` chỉ nhận giá trị `true` hoặc `false`. 'Boolean flag = true;' là khai báo một object Boolean, không phải primitive boolean"
+        },
+        {
+          "id": 4,
+          "question": "Đâu là lỗi cú pháp trong đoạn code sau? \n`public static void main(String[] args) {\n  int x = 10;\n  if (x = 5) {\n     System.out.println(\"x is 5\");\n  }\n}`",
+          "options": [
+            "Lỗi gán giá trị trong if",
+            "Thiếu dấu ngoặc nhọn",
+            "Sai vị trí khai báo biến",
+            "Không có lỗi"
+          ],
+          "correctAnswer": ["Lỗi gán giá trị trong if"],
+          "reason": "Lệnh `if` sử dụng `=` để gán giá trị thay vì `==` để so sánh. Đây là một lỗi cú pháp phổ biến."
+        },
+        {
+          "id": 5,
+          "question": "Những cách nào sau đây là hợp lệ để khai báo và khởi tạo một mảng các số nguyên?",
+          "options": [
+            "int[] arr = {1, 2, 3};",
+            "int arr[] = new int[3]{1, 2, 3};",
+            "int[] arr = new int[]{1, 2, 3};",
+            "int arr[3] = {1, 2, 3};"
+          ],
+          "correctAnswer": [
+            "int[] arr = {1, 2, 3};",
+            "int[] arr = new int[]{1, 2, 3};"
+          ],
+          "reason": "Hai cách này là đúng để khai báo và khởi tạo mảng trong Java. Các cách khác có cú pháp không hợp lệ."
+        },
+        {
+          "id": 6,
+          "question": "Đâu là lỗi cú pháp trong đoạn code sau? `for (int i = 0, j = 10; i < j; i++; j--) { }`",
+          "options": [
+            "Lỗi khai báo nhiều biến trong for",
+            "Lỗi tăng biến",
+            "Lỗi điều kiện vòng lặp",
+            "Không có lỗi"
+          ],
+          "correctAnswer": ["Lỗi khai báo nhiều biến trong for"],
+          "reason": "Trong vòng lặp for, các biến phải được khai báo và khởi tạo riêng biệt, không được khai báo cùng lúc bằng dấu phẩy."
+        },
+        {
+          "id": 7,
+          "question": "Cách nào sau đây là đúng để gọi constructor của lớp cha trong constructor của lớp con?",
+          "options": [
+            "super.constructor()",
+            "super()",
+            "this.constructor()",
+            "this()"
+          ],
+          "correctAnswer": ["super()"],
+          "reason": "Từ khóa `super()` được sử dụng để gọi constructor của lớp cha."
+        },
+        {
+          "id": 8,
+          "question": "Những cách nào sau đây khai báo đúng một phương thức trừu tượng (abstract)?",
+          "options": [
+            "abstract void myMethod();",
+            "void abstract myMethod();",
+            "abstract public void myMethod(){}",
+            "public abstract void myMethod();"
+          ],
+          "correctAnswer": [
+            "abstract void myMethod();",
+            "public abstract void myMethod();"
+          ],
+          "reason": "Từ khóa `abstract` phải được đặt trước kiểu trả về của phương thức và không được có phần thân."
+        },
+        {
+          "id": 9,
+          "question": "Đâu là lỗi trong đoạn code sau? \n`class MyClass {\n  private int x;\n  public void setX(Integer x) {\n     this.x = x;\n  }\n}`",
+          "options": [
+            "Lỗi ép kiểu",
+            "Không có lỗi",
+            "Lỗi tham số",
+            "Lỗi modifier"
+          ],
+          "correctAnswer": ["Không có lỗi"],
+          "reason": "Không có lỗi trong code trên, vì Integer là lớp Wrapper, Java tự động unboxing giá trị."
+        },
+        {
+          "id": 10,
+          "question": "Những cách nào sau đây là đúng để tạo một interface?",
+          "options": [
+            "class MyInterface{}",
+            "interface MyInterface{}",
+            "abstract class MyInterface{}",
+            "public MyInterface{}"
+          ],
+          "correctAnswer": ["interface MyInterface{}"],
+          "reason": "Từ khóa `interface` được dùng để khai báo một interface."
+        },
+        {
+          "id": 11,
+          "question": "Cách nào sau đây là đúng khi sử dụng từ khóa `this` trong Java?",
+          "options": [
+            "this.variable",
+            "this()",
+            "this.method()",
+            "this= new MyClass()"
+          ],
+          "correctAnswer": ["this.variable", "this()", "this.method()"],
+          "reason": "`this.variable` tham chiếu đến biến của đối tượng hiện tại, `this()` gọi constructor của lớp hiện tại, và `this.method()` gọi method của lớp hiện tại."
+        },
+        {
+          "id": 12,
+          "question": "Đâu là lỗi cú pháp trong đoạn code sau: \n`switch (day) {\n case 1:\n System.out.println(\"Monday\");\n case 2:\n System.out.println(\"Tuesday\");\n}`",
+          "options": [
+            "Thiếu dấu ngoặc nhọn",
+            "Thiếu break",
+            "Lỗi case",
+            "Không có lỗi"
+          ],
+          "correctAnswer": ["Thiếu break"],
+          "reason": "Thiếu từ khóa `break` sẽ làm cho các case tiếp theo cũng được thực thi (fall through)."
+        },
+        {
+          "id": 13,
+          "question": "Những từ khóa nào sau đây có thể dùng để bắt exception trong Java?",
+          "options": ["try", "catch", "finally", "throw"],
+          "correctAnswer": ["try", "catch", "finally"],
+          "reason": "`try` bắt đầu khối code có thể ném ra exception, `catch` bắt exception, và `finally` thực thi sau khối try-catch."
+        },
+        {
+          "id": 14,
+          "question": "Đâu là lỗi trong đoạn code sau? \n`int x = 10;\nInteger y = x;\nString z = y;`",
+          "options": [
+            "Lỗi ép kiểu",
+            "Lỗi khai báo",
+            "Không có lỗi",
+            "Lỗi modifier"
+          ],
+          "correctAnswer": ["Lỗi ép kiểu"],
+          "reason": "Không thể gán trực tiếp kiểu `Integer` cho kiểu `String`."
+        },
+        {
+          "id": 15,
+          "question": "Những cách nào sau đây là hợp lệ để gọi một phương thức không static trong một lớp khác?",
+          "options": [
+            "ClassName.method()",
+            "objectName.method()",
+            "this.method()",
+            "super.method()"
+          ],
+          "correctAnswer": ["objectName.method()"],
+          "reason": "Phương thức không static cần phải được gọi thông qua một đối tượng của lớp đó."
+        },
+        {
+          "id": 16,
+          "question": "Đâu là lỗi trong khai báo enum sau: `enum Color { RED, BLUE, GREEN; }`",
+          "options": [
+            "Thiếu từ khóa public",
+            "Không có lỗi",
+            "Thiếu dấu phẩy",
+            "Thiếu dấu chấm phẩy"
+          ],
+          "correctAnswer": ["Không có lỗi"],
+          "reason": "Khai báo enum trên hoàn toàn hợp lệ."
+        },
+        {
+          "id": 17,
+          "question": "Những cách nào sau đây đúng để khai báo một biến kiểu `float`?",
+          "options": [
+            "float num = 3.14;",
+            "float num = 3.14f;",
+            "Float num = 3.14;",
+            "Float num = 3.14f;"
+          ],
+          "correctAnswer": ["float num = 3.14f;", "Float num = 3.14f;"],
+          "reason": "Để khai báo biến float, cần thêm `f` hoặc `F` ở cuối số thực."
+        },
+        {
+          "id": 18,
+          "question": "Những cách nào sau đây có thể dùng để khai báo một lớp con kế thừa từ một lớp cha?",
+          "options": [
+            "class Child extends Parent {}",
+            "class Child implements Parent {}",
+            "class Parent extends Child {}",
+            "class Child inherit Parent {}"
+          ],
+          "correctAnswer": ["class Child extends Parent {}"],
+          "reason": "Từ khóa `extends` được dùng để kế thừa từ lớp cha."
+        },
+        {
+          "id": 19,
+          "question": "Đâu là lỗi cú pháp trong đoạn code sau:\n`int[] numbers = new int[5];\nfor (int i = 1; i <= numbers.length; i++) {\n  numbers[i] = i;\n}`",
+          "options": [
+            "Lỗi chỉ số mảng",
+            "Lỗi vòng lặp for",
+            "Lỗi ép kiểu",
+            "Không có lỗi"
+          ],
+          "correctAnswer": ["Lỗi chỉ số mảng", "Lỗi vòng lặp for"],
+          "reason": "Vòng lặp chạy từ `1` đến `numbers.length` nên sẽ gây lỗi `ArrayIndexOutOfBoundsException`, và gán vào mảng cũng không đúng, nên `i` không thể là chỉ số mà gán trực tiếp vào mảng."
+        },
+        {
+          "id": 20,
+          "question": "Những từ khóa nào sau đây được dùng để điều khiển truy cập trong Java?",
+          "options": ["public", "private", "protected", "static", "final"],
+          "correctAnswer": ["public", "private", "protected"],
+          "reason": "Các access modifiers bao gồm: `public`, `private`, `protected`, và `default` (không khai báo)."
+        },
+        {
+          "id": 21,
+          "question": "Những cách nào sau đây là đúng để khởi tạo một đối tượng String với một giá trị ban đầu?",
+          "options": [
+            "String s = \"Hello\";",
+            "String s = new String(\"Hello\");",
+            "String s = new String('Hello');",
+            "String s = 'Hello'"
+          ],
+          "correctAnswer": [
+            "String s = \"Hello\";",
+            "String s = new String(\"Hello\");"
+          ],
+          "reason": "Chuỗi trong Java dùng dấu nháy đôi hoặc new String()"
+        },
+        {
+          "id": 22,
+          "question": "Đâu là lỗi sai trong đoạn code sau? \n`int x = 10;\nx = null;`",
+          "options": [
+            "Lỗi gán null cho primitive",
+            "Lỗi khai báo",
+            "Lỗi ép kiểu",
+            "Không có lỗi"
+          ],
+          "correctAnswer": ["Lỗi gán null cho primitive"],
+          "reason": "Biến kiểu nguyên thủy `int` không thể gán giá trị `null`."
+        },
+        {
+          "id": 23,
+          "question": "Đâu là lỗi cú pháp khi khai báo một phương thức static trong Java?",
+          "options": [
+            "static public void myMethod(){}",
+            "public static void myMethod(){}",
+            "void public static myMethod()",
+            "public void static myMethod()"
+          ],
+          "correctAnswer": [
+            "static public void myMethod(){}",
+            "public static void myMethod(){}"
+          ],
+          "reason": "Từ khóa `static` nên đặt trước kiểu trả về."
+        },
+        {
+          "id": 24,
+          "question": "Điều gì xảy ra nếu một phương thức không có giá trị trả về?",
+          "options": [
+            "Nó phải khai báo từ khóa `null`",
+            "Nó phải khai báo từ khóa `void`",
+            "Nó phải khai báo từ khóa `return`",
+            "Nó không cần khai báo gì"
+          ],
+          "correctAnswer": ["Nó phải khai báo từ khóa `void`"],
+          "reason": "Phương thức không trả về giá trị phải được khai báo với từ khóa `void`."
+        },
+        {
+          "id": 25,
+          "question": "Những cách nào sau đây thể hiện đúng cách ép kiểu dữ liệu trong Java?",
+          "options": [
+            "int x = (int) 3.14;",
+            "Integer x = (Integer) 3.14;",
+            "double y = (double) 10;",
+            "String z = (String) 10;"
+          ],
+          "correctAnswer": ["int x = (int) 3.14;", "double y = (double) 10;"],
+          "reason": "Đây là cú pháp ép kiểu cơ bản."
+        },
+        {
+          "id": 26,
+          "question": "Đâu là lỗi trong khai báo enum sau: `enum Status { ACTIVE = 1, INACTIVE = 0;}`",
+          "options": [
+            "Lỗi gán giá trị cho enum",
+            "Không có lỗi",
+            "Lỗi cú pháp",
+            "Lỗi modifier"
+          ],
+          "correctAnswer": ["Lỗi gán giá trị cho enum"],
+          "reason": "Enum không gán trực tiếp giá trị, mà gán giá trị ngầm định theo thứ tự."
+        },
+        {
+          "id": 27,
+          "question": "Trong Java, cách nào sau đây tạo ra một đối tượng từ lớp cha trong lớp con",
+          "options": [
+            "parent p = new parent()",
+            "super = new parent()",
+            "this = new parent()",
+            "super()"
+          ],
+          "correctAnswer": ["super()"],
+          "reason": "Từ khóa `super()` gọi constructor của lớp cha từ constructor của lớp con."
+        },
+        {
+          "id": 28,
+          "question": "Đâu là lỗi cú pháp trong đoạn code sau? \n `class MyClass {\n  public MyClass(int x) { }\n  public MyClass() { }\n}`",
+          "options": [
+            "Lỗi constructor trùng tên",
+            "Không có lỗi",
+            "Lỗi khai báo",
+            "Lỗi modifier"
+          ],
+          "correctAnswer": ["Không có lỗi"],
+          "reason": "Nạp chồng constructor là hoàn toàn hợp lệ."
+        },
+        {
+          "id": 29,
+          "question": "Đâu là lỗi cú pháp trong khai báo mảng sau: `int arr = new int[5];`",
+          "options": [
+            "Lỗi khai báo",
+            "Không có lỗi",
+            "Lỗi ép kiểu",
+            "Lỗi truy cập"
+          ],
+          "correctAnswer": ["Lỗi khai báo"],
+          "reason": "Khai báo mảng phải có dấu [] như `int[] arr`. "
+        },
+        {
+          "id": 30,
+          "question": "Điều gì xảy ra nếu bạn khai báo một biến cục bộ trùng tên với một biến thành viên (instance variable) trong Java?",
+          "options": [
+            "Lỗi compile",
+            "Biến cục bộ sẽ che biến thành viên",
+            "Biến thành viên bị thay đổi",
+            "Chương trình sẽ treo"
+          ],
+          "correctAnswer": ["Biến cục bộ sẽ che biến thành viên"],
+          "reason": "Biến cục bộ sẽ được ưu tiên sử dụng hơn và che đi biến thành viên trong phạm vi của phương thức đó."
+        }
+      ]
+    },
+    {
+      "id": 12,
+      "title": "Bài Kiểm Tra Toàn Diện Java - 50 Câu Hỏi",
+      "timeLimit": 5400,
+      "questions": [
+        {
+          "id": 1,
+          "question": "Những phát biểu nào sau đây là đúng về biến instance trong Java?",
+          "options": [
+            "Được khai báo bên trong một phương thức",
+            "Được khai báo bên ngoài bất kỳ phương thức nào",
+            "Thuộc về một đối tượng cụ thể",
+            "Thuộc về lớp",
+            "Có thể được truy cập trực tiếp từ một phương thức static"
+          ],
+          "correctAnswer": [
+            "Được khai báo bên ngoài bất kỳ phương thức nào",
+            "Thuộc về một đối tượng cụ thể"
+          ],
+          "reason": "Biến instance (biến thành viên) được khai báo bên ngoài bất kỳ phương thức nào và thuộc về một đối tượng cụ thể của lớp. Chúng không thể được truy cập trực tiếp từ phương thức static."
+        },
+        {
+          "id": 2,
+          "question": "Kết quả của đoạn code sau là gì? `int x = 5; int y = x++; System.out.println(x + \" \" + y);`",
+          "options": ["5 5", "6 6", "6 5", "5 6"],
+          "correctAnswer": ["6 5"],
+          "reason": "Toán tử `++` hậu tố (postfix) sẽ trả về giá trị của `x` trước, sau đó mới tăng `x` lên 1. Do đó, `y` sẽ nhận giá trị 5, và sau đó `x` tăng lên 6."
+        },
+        {
+          "id": 3,
+          "question": "Những từ khóa nào sau đây liên quan đến xử lý ngoại lệ (exception handling) trong Java?",
+          "options": [
+            "try",
+            "catch",
+            "throw",
+            "throws",
+            "final",
+            "finally",
+            "exception"
+          ],
+          "correctAnswer": ["try", "catch", "throw", "throws", "finally"],
+          "reason": "`try` chứa mã có thể gây ra ngoại lệ, `catch` xử lý ngoại lệ, `throw` ném ra ngoại lệ, `throws` khai báo phương thức có thể ném ra ngoại lệ, và `finally` chứa mã luôn được thực thi."
+        },
+        {
+          "id": 4,
+          "question": "Đâu là cách khai báo và khởi tạo một hằng số trong Java?",
+          "options": [
+            "const int MAX_VALUE = 100;",
+            "final int MAX_VALUE = 100;",
+            "static final int MAX_VALUE = 100;",
+            "int MAX_VALUE = 100;"
+          ],
+          "correctAnswer": [
+            "final int MAX_VALUE = 100;",
+            "static final int MAX_VALUE = 100;"
+          ],
+          "reason": "Từ khóa `final` được sử dụng để khai báo hằng số. `static final` thường được dùng cho các hằng số chung của lớp."
+        },
+        {
+          "id": 5,
+          "question": "Lớp Object trong Java là gì?",
+          "options": [
+            "Là lớp cơ sở của tất cả các lớp",
+            "Là một lớp trừu tượng",
+            "Là một interface",
+            "Là một lớp final"
+          ],
+          "correctAnswer": ["Là lớp cơ sở của tất cả các lớp"],
+          "reason": "Trong Java, tất cả các lớp đều trực tiếp hoặc gián tiếp kế thừa từ lớp `Object`."
+        },
+        {
+          "id": 6,
+          "question": "Interface trong Java là gì?",
+          "options": [
+            "Là một bản thiết kế cho các lớp",
+            "Chứa các phương thức trừu tượng",
+            "Có thể chứa các phương thức cụ thể",
+            "Có thể chứa các biến instance",
+            "Một lớp có thể implement nhiều interface"
+          ],
+          "correctAnswer": [
+            "Là một bản thiết kế cho các lớp",
+            "Chứa các phương thức trừu tượng",
+            "Có thể chứa các phương thức cụ thể",
+            "Một lớp có thể implement nhiều interface"
+          ],
+          "reason": "Interface định nghĩa các phương thức mà các lớp implement nó phải cung cấp. Từ Java 8, interface có thể chứa các phương thức default (cụ thể). Một lớp có thể implement nhiều interface."
+        },
+        {
+          "id": 7,
+          "question": "Từ khóa `static` trong Java có ý nghĩa gì?",
+          "options": [
+            "Biến/phương thức thuộc về lớp",
+            "Biến/phương thức thuộc về đối tượng",
+            "Biến/phương thức không thể thay đổi",
+            "Biến/phương thức chỉ có thể được truy cập trong cùng một package"
+          ],
+          "correctAnswer": ["Biến/phương thức thuộc về lớp"],
+          "reason": "Khi một thành viên (biến hoặc phương thức) được khai báo là `static`, nó thuộc về lớp chứ không phải đối tượng cụ thể."
+        },
+        {
+          "id": 8,
+          "question": "Những phát biểu nào sau đây là đúng về constructor trong Java?",
+          "options": [
+            "Constructor có cùng tên với lớp",
+            "Constructor không có kiểu trả về",
+            "Constructor có thể được gọi trực tiếp",
+            "Một lớp có thể có nhiều constructor",
+            "Constructor được gọi khi một đối tượng được tạo"
+          ],
+          "correctAnswer": [
+            "Constructor có cùng tên với lớp",
+            "Constructor không có kiểu trả về",
+            "Một lớp có thể có nhiều constructor",
+            "Constructor được gọi khi một đối tượng được tạo"
+          ],
+          "reason": "Constructor là một phương thức đặc biệt dùng để khởi tạo đối tượng, có cùng tên với lớp, không có kiểu trả về và được gọi tự động khi đối tượng được tạo. Một lớp có thể có nhiều constructor (nạp chồng constructor)."
+        },
+        {
+          "id": 9,
+          "question": "Đâu là cách đúng để so sánh hai chuỗi trong Java?",
+          "options": [
+            "s1 == s2",
+            "s1.equals(s2)",
+            "s1.compareTo(s2)",
+            "s1.equalsIgnoreCase(s2)",
+            "s1.compare(s2)"
+          ],
+          "correctAnswer": [
+            "s1.equals(s2)",
+            "s1.compareTo(s2)",
+            "s1.equalsIgnoreCase(s2)"
+          ],
+          "reason": "`equals()` so sánh nội dung của hai chuỗi, `compareTo()` so sánh thứ tự từ điển, và `equalsIgnoreCase()` so sánh không phân biệt hoa thường. `==` so sánh tham chiếu của hai đối tượng."
+        },
+        {
+          "id": 10,
+          "question": "Những phát biểu nào sau đây là đúng về `ArrayList` trong Java?",
+          "options": [
+            "Là một mảng động",
+            "Có thể chứa các phần tử có kiểu dữ liệu khác nhau",
+            "Kích thước cố định",
+            "Truy cập phần tử bằng chỉ số",
+            "Là một lớp implement interface `List`"
+          ],
+          "correctAnswer": [
+            "Là một mảng động",
+            "Truy cập phần tử bằng chỉ số",
+            "Là một lớp implement interface `List`"
+          ],
+          "reason": "`ArrayList` là một mảng động, có thể thay đổi kích thước. Nó là một generic class, chỉ cho phép chứa các phần tử cùng kiểu dữ liệu và truy cập các phần tử bằng chỉ số. `ArrayList` implement interface `List`."
+        },
+        {
+          "id": 11,
+          "question": "Phạm vi truy cập `protected` cho phép truy cập từ đâu?",
+          "options": [
+            "Trong cùng một lớp",
+            "Trong cùng package",
+            "Từ các lớp con (subclass) trong các package khác",
+            "Từ bất kỳ đâu"
+          ],
+          "correctAnswer": [
+            "Trong cùng một lớp",
+            "Trong cùng package",
+            "Từ các lớp con (subclass) trong các package khác"
+          ],
+          "reason": "Thành viên `protected` có thể được truy cập từ cùng một lớp, cùng package, và từ các lớp con của nó, kể cả khi các lớp con đó nằm ở package khác."
+        },
+        {
+          "id": 12,
+          "question": "Đâu là các cách đúng để khởi tạo một mảng trong Java?",
+          "options": [
+            "int[] arr = new int[5];",
+            "int arr[] = new int[5];",
+            "int[] arr = {1, 2, 3, 4, 5};",
+            "int arr[5] = {1, 2, 3, 4, 5};",
+            "int[] arr = new int[]{1,2,3};"
+          ],
+          "correctAnswer": [
+            "int[] arr = new int[5];",
+            "int arr[] = new int[5];",
+            "int[] arr = {1, 2, 3, 4, 5};",
+            "int[] arr = new int[]{1,2,3};"
+          ],
+          "reason": "Tất cả các phương án trên đều đúng cú pháp để khai báo và khởi tạo mảng, trừ `int arr[5] = {1, 2, 3, 4, 5};`. Phương án cuối cùng là khai báo theo kiểu C/C++, không hợp lệ trong Java."
+        },
+        {
+          "id": 13,
+          "question": "Từ khóa `final` trong Java có ý nghĩa gì?",
+          "options": [
+            "Một biến không thể thay đổi giá trị",
+            "Một phương thức không thể bị override",
+            "Một lớp không thể kế thừa",
+            "Một đối tượng không thể bị xóa"
+          ],
+          "correctAnswer": [
+            "Một biến không thể thay đổi giá trị",
+            "Một phương thức không thể bị override",
+            "Một lớp không thể kế thừa"
+          ],
+          "reason": "`final` có thể được áp dụng cho biến (để tạo hằng số), phương thức (để ngăn chặn overriding), và lớp (để ngăn chặn kế thừa)."
+        },
+        {
+          "id": 14,
+          "question": "Kiểu dữ liệu nào sau đây không phải là kiểu nguyên thủy (primitive) trong Java?",
+          "options": ["int", "float", "boolean", "String", "char"],
+          "correctAnswer": ["String"],
+          "reason": "`String` là một lớp trong Java, không phải là kiểu dữ liệu nguyên thủy."
+        },
+        {
+          "id": 15,
+          "question": "Đâu là cú pháp đúng của vòng lặp `for-each` trong Java?",
+          "options": [
+            "for (int i : arr) {}",
+            "for (arr : int i) {}",
+            "foreach (int i in arr) {}",
+            "for (int i = 0; i < arr.length; i++) {}"
+          ],
+          "correctAnswer": ["for (int i : arr) {}"],
+          "reason": "Vòng lặp `for-each` có cú pháp `for (ElementType element : collection)`."
+        },
+        {
+          "id": 16,
+          "question": "Đoạn code sau sẽ in ra kết quả gì? `String s = \"Hello\"; s.concat(\" World\"); System.out.println(s);`",
+          "options": ["Hello", "Hello World", "World", "Lỗi biên dịch"],
+          "correctAnswer": ["Hello"],
+          "reason": "Phương thức `concat()` tạo ra một chuỗi mới, nhưng không thay đổi chuỗi ban đầu. Do đó, `s` vẫn giữ nguyên giá trị \"Hello\"."
+        },
+        {
+          "id": 17,
+          "question": "Những phát biểu nào sau đây là đúng về `HashMap` trong Java?",
+          "options": [
+            "Lưu trữ các cặp key-value",
+            "Các key phải là duy nhất",
+            "Thứ tự các phần tử được bảo toàn",
+            "Cho phép key có giá trị null",
+            "Cho phép value có giá trị null"
+          ],
+          "correctAnswer": [
+            "Lưu trữ các cặp key-value",
+            "Các key phải là duy nhất",
+            "Cho phép key có giá trị null",
+            "Cho phép value có giá trị null"
+          ],
+          "reason": "`HashMap` lưu trữ dữ liệu dưới dạng các cặp key-value, trong đó các key phải là duy nhất. `HashMap` không đảm bảo thứ tự các phần tử và cho phép một key null và nhiều value null."
+        },
+        {
+          "id": 18,
+          "question": "Đâu là đầu ra của đoạn code sau? `int x = 10; System.out.println(x > 5 ? \"x > 5\" : \"x <= 5\");`",
+          "options": ["x > 5", "x <= 5", "10", "Lỗi biên dịch"],
+          "correctAnswer": ["x > 5"],
+          "reason": "Đây là toán tử điều kiện (ternary operator). Vì `x > 5` là đúng, nên biểu thức trả về \"x > 5\"."
+        },
+        {
+          "id": 19,
+          "question": "Những phát biểu nào sau đây là đúng về kế thừa (inheritance) trong Java?",
+          "options": [
+            "Một lớp con kế thừa tất cả các thành viên của lớp cha",
+            "Một lớp con có thể ghi đè (override) các phương thức của lớp cha",
+            "Một lớp con có thể truy cập trực tiếp các thành viên private của lớp cha",
+            "Một lớp chỉ có thể kế thừa từ một lớp duy nhất",
+            "Từ khóa `extends` được sử dụng để chỉ định lớp cha"
+          ],
+          "correctAnswer": [
+            "Một lớp con có thể ghi đè (override) các phương thức của lớp cha",
+            "Một lớp chỉ có thể kế thừa từ một lớp duy nhất",
+            "Từ khóa `extends` được sử dụng để chỉ định lớp cha"
+          ],
+          "reason": "Một lớp con kế thừa các thành viên public và protected của lớp cha, nhưng không kế thừa các thành viên private. Lớp con có thể ghi đè các phương thức của lớp cha. Java không hỗ trợ đa kế thừa, một lớp chỉ có thể kế thừa từ một lớp duy nhất. Từ khóa `extends` được sử dụng để chỉ định lớp cha."
+        },
+        {
+          "id": 20,
+          "question": "Làm thế nào để tạo một luồng (thread) mới trong Java?",
+          "options": [
+            "Kế thừa từ lớp `Thread` và override phương thức `run()`",
+            "Implement interface `Runnable` và override phương thức `run()`",
+            "Sử dụng lớp `ThreadFactory`",
+            "Gọi phương thức `start()` của lớp `Thread`"
+          ],
+          "correctAnswer": [
+            "Kế thừa từ lớp `Thread` và override phương thức `run()`",
+            "Implement interface `Runnable` và override phương thức `run()`"
+          ],
+          "reason": "Có hai cách chính để tạo luồng: kế thừa từ lớp `Thread` hoặc implement interface `Runnable`. Sau đó, cần override phương thức `run()` để chứa mã thực thi của luồng. Để bắt đầu luồng, gọi phương thức `start()`."
+        },
+        {
+          "id": 21,
+          "question": "Những từ khóa nào sau đây có thể được sử dụng với biến trong Java?",
+          "options": [
+            "public",
+            "private",
+            "protected",
+            "static",
+            "final",
+            "abstract",
+            "transient",
+            "volatile"
+          ],
+          "correctAnswer": [
+            "public",
+            "private",
+            "protected",
+            "static",
+            "final",
+            "transient",
+            "volatile"
+          ],
+          "reason": "Đây là các access modifiers và non-access modifiers có thể được sử dụng với biến trong Java."
+        },
+        {
+          "id": 22,
+          "question": "Đâu là các cách đúng để khai báo một mảng hai chiều trong Java?",
+          "options": [
+            "int[][] arr = new int[3][4];",
+            "int arr[][] = new int[3][4];",
+            "int[] arr[] = new int[3][4];",
+            "int[][] arr = new int[3][];",
+            "int[][] arr = new int[][4];"
+          ],
+          "correctAnswer": [
+            "int[][] arr = new int[3][4];",
+            "int arr[][] = new int[3][4];",
+            "int[] arr[] = new int[3][4];",
+            "int[][] arr = new int[3][];"
+          ],
+          "reason": "Tất cả các phương án trên đều đúng cú pháp để khai báo mảng hai chiều, trừ `int[][] arr = new int[][4];`. Phương án cuối cùng thiếu chỉ định số hàng."
+        },
+        {
+          "id": 23,
+          "question": "Những phát biểu nào sau đây là đúng về `StringBuilder` trong Java?",
+          "options": [
+            "Là một lớp immutable",
+            "Là một lớp mutable",
+            "Hiệu quả hơn `String` khi thực hiện nhiều thao tác nối chuỗi",
+            "Không an toàn cho luồng (not thread-safe)"
+          ],
+          "correctAnswer": [
+            "Là một lớp mutable",
+            "Hiệu quả hơn `String` khi thực hiện nhiều thao tác nối chuỗi",
+            "Không an toàn cho luồng (not thread-safe)"
+          ],
+          "reason": "`StringBuilder` là một lớp mutable, cho phép thay đổi nội dung của chuỗi. Nó hiệu quả hơn `String` khi cần thực hiện nhiều thao tác nối chuỗi. `StringBuilder` không an toàn cho luồng, trong khi `StringBuffer` là phiên bản thread-safe."
+        },
+        {
+          "id": 24,
+          "question": "Đâu là đầu ra của đoạn code sau? `int x = 5; int y = x-- * 2; System.out.println(x + \" \" + y);`",
+          "options": ["4 10", "4 8", "5 10", "5 8"],
+          "correctAnswer": ["4 10"],
+          "reason": "Toán tử `--` hậu tố (postfix) sẽ trả về giá trị của `x` trước (5), sau đó mới giảm `x` xuống 1. Do đó, `y` sẽ nhận giá trị 5 * 2 = 10, và sau đó `x` giảm xuống 4."
+        },
+        {
+          "id": 25,
+          "question": "Làm thế nào để đọc dữ liệu từ file trong Java?",
+          "options": [
+            "Sử dụng lớp `FileReader`",
+            "Sử dụng lớp `BufferedReader`",
+            "Sử dụng lớp `Scanner`",
+            "Sử dụng lớp `FileInputStream`",
+            "Sử dụng lớp `File`"
+          ],
+          "correctAnswer": [
+            "Sử dụng lớp `FileReader`",
+            "Sử dụng lớp `BufferedReader`",
+            "Sử dụng lớp `Scanner`",
+            "Sử dụng lớp `FileInputStream`"
+          ],
+          "reason": "Có nhiều cách để đọc dữ liệu từ file trong Java. `FileReader` và `BufferedReader` thường được sử dụng để đọc file text, `Scanner` có thể đọc nhiều kiểu dữ liệu khác nhau từ file, và `FileInputStream` được sử dụng để đọc file dạng byte."
+        },
+        {
+          "id": 26,
+          "question": "Những phát biểu nào sau đây là đúng về `HashSet` trong Java?",
+          "options": [
+            "Lưu trữ các phần tử theo thứ tự",
+            "Cho phép các phần tử trùng lặp",
+            "Không cho phép các phần tử trùng lặp",
+            "Truy cập phần tử bằng chỉ số",
+            "Là một lớp implement interface `Set`"
+          ],
+          "correctAnswer": [
+            "Không cho phép các phần tử trùng lặp",
+            "Là một lớp implement interface `Set`"
+          ],
+          "reason": "`HashSet` không đảm bảo thứ tự các phần tử và không cho phép các phần tử trùng lặp. Nó implement interface `Set`."
+        },
+        {
+          "id": 27,
+          "question": "Đâu là các cách đúng để khai báo và khởi tạo một `ArrayList` chứa các số nguyên trong Java?",
+          "options": [
+            "ArrayList<int> list = new ArrayList<>();",
+            "ArrayList<Integer> list = new ArrayList<>();",
+            "List<Integer> list = new ArrayList<>();",
+            "ArrayList list = new ArrayList();"
+          ],
+          "correctAnswer": [
+            "ArrayList<Integer> list = new ArrayList<>();",
+            "List<Integer> list = new ArrayList<>();"
+          ],
+          "reason": "`ArrayList` là generic class, nên cần chỉ định kiểu dữ liệu của các phần tử. `ArrayList<int>` là sai vì `int` là kiểu nguyên thủy, cần sử dụng lớp wrapper `Integer`. Nên khai báo kiểu interface `List` thay vì `ArrayList`."
+        },
+        {
+          "id": 28,
+          "question": "Làm thế nào để ghi dữ liệu vào file trong Java?",
+          "options": [
+            "Sử dụng lớp `FileWriter`",
+            "Sử dụng lớp `BufferedWriter`",
+            "Sử dụng lớp `PrintWriter`",
+            "Sử dụng lớp `FileOutputStream`",
+            "Sử dụng lớp `File`"
+          ],
+          "correctAnswer": [
+            "Sử dụng lớp `FileWriter`",
+            "Sử dụng lớp `BufferedWriter`",
+            "Sử dụng lớp `PrintWriter`",
+            "Sử dụng lớp `FileOutputStream`"
+          ],
+          "reason": "Có nhiều cách để ghi dữ liệu vào file trong Java. `FileWriter` và `BufferedWriter` thường được sử dụng để ghi file text, `PrintWriter` cung cấp các phương thức tiện lợi để ghi nhiều kiểu dữ liệu, và `FileOutputStream` được sử dụng để ghi file dạng byte."
+        },
+        {
+          "id": 29,
+          "question": "Đâu là đầu ra của đoạn code sau? `int x = 1; int y = 2; int z = x++ + ++y; System.out.println(x + \" \" + y + \" \" + z);`",
+          "options": ["2 3 4", "1 3 3", "2 2 3", "1 2 4"],
+          "correctAnswer": ["2 3 4"],
+          "reason": "`x++` trả về giá trị của `x` trước (1), sau đó mới tăng `x` lên 2. `++y` tăng `y` lên 3 trước, sau đó trả về giá trị 3. Do đó, `z` sẽ nhận giá trị 1 + 3 = 4."
+        },
+        {
+          "id": 30,
+          "question": "Những phát biểu nào sau đây là đúng về `LinkedList` trong Java?",
+          "options": [
+            "Lưu trữ các phần tử trong các ô nhớ liên tiếp",
+            "Truy cập phần tử bằng chỉ số chậm hơn `ArrayList`",
+            "Chèn và xóa phần tử nhanh hơn `ArrayList`",
+            "Là một lớp implement interface `List`",
+            "Là một lớp implement interface `Queue`"
+          ],
+          "correctAnswer": [
+            "Truy cập phần tử bằng chỉ số chậm hơn `ArrayList`",
+            "Chèn và xóa phần tử nhanh hơn `ArrayList`",
+            "Là một lớp implement interface `List`",
+            "Là một lớp implement interface `Queue`"
+          ],
+          "reason": "`LinkedList` lưu trữ các phần tử trong các nút (node) được liên kết với nhau, không liên tiếp trong bộ nhớ. Do đó, việc truy cập phần tử bằng chỉ số chậm hơn `ArrayList`, nhưng việc chèn và xóa phần tử nhanh hơn. `LinkedList` implement cả interface `List` và `Queue`."
+        },
+        {
+          "id": 31,
+          "question": "Làm thế nào để chuyển đổi một chuỗi sang số nguyên trong Java?",
+          "options": [
+            "Sử dụng phương thức `parseInt()` của lớp `Integer`",
+            "Sử dụng phương thức `valueOf()` của lớp `Integer`",
+            "Sử dụng phương thức `parseInt()` của lớp `String`",
+            "Ép kiểu trực tiếp"
+          ],
+          "correctAnswer": [
+            "Sử dụng phương thức `parseInt()` của lớp `Integer`",
+            "Sử dụng phương thức `valueOf()` của lớp `Integer`"
+          ],
+          "reason": "Phương thức `parseInt()` của lớp `Integer` trả về kiểu `int`, trong khi phương thức `valueOf()` trả về đối tượng `Integer`. Không thể ép kiểu trực tiếp một chuỗi sang số nguyên."
+        },
+        {
+          "id": 32,
+          "question": "Đâu là kết quả của đoạn code sau? `int x = 5; if (x > 3) { System.out.print(\"A\"); } else if (x > 4) { System.out.print(\"B\"); } else { System.out.print(\"C\"); }`",
+          "options": ["A", "AB", "AC", "ABC"],
+          "correctAnswer": ["A"],
+          "reason": "Vì điều kiện `x > 3` là đúng, nên chỉ có khối lệnh đầu tiên được thực thi và in ra \"A\". Các khối lệnh `else if` và `else` không được thực thi."
+        },
+        {
+          "id": 33,
+          "question": "Những phát biểu nào sau đây là đúng về `abstract class` (lớp trừu tượng) trong Java?",
+          "options": [
+            "Có thể chứa các phương thức trừu tượng",
+            "Có thể chứa các phương thức cụ thể",
+            "Có thể được khởi tạo trực tiếp",
+            "Một lớp có thể kế thừa từ nhiều abstract class",
+            "Phải có từ khóa `abstract` trong khai báo"
+          ],
+          "correctAnswer": [
+            "Có thể chứa các phương thức trừu tượng",
+            "Có thể chứa các phương thức cụ thể",
+            "Phải có từ khóa `abstract` trong khai báo"
+          ],
+          "reason": "Abstract class có thể chứa cả phương thức trừu tượng và phương thức cụ thể. Nó không thể được khởi tạo trực tiếp, mà phải thông qua lớp con. Một lớp chỉ có thể kế thừa từ một abstract class duy nhất. Abstract class phải có từ khóa `abstract` trong khai báo."
+        },
+        {
+          "id": 34,
+          "question": "Đâu là cách đúng để khai báo một phương thức có thể ném ra ngoại lệ `IOException`?",
+          "options": [
+            "public void myMethod() throws IOException {}",
+            "public void myMethod() throw IOException {}",
+            "public void myMethod() catch IOException {}",
+            "public void myMethod() try IOException {}"
+          ],
+          "correctAnswer": ["public void myMethod() throws IOException {}"],
+          "reason": "Từ khóa `throws` được sử dụng trong khai báo phương thức để chỉ định các loại ngoại lệ mà phương thức đó có thể ném ra."
+        },
+        {
+          "id": 35,
+          "question": "Những phát biểu nào sau đây là đúng về `interface` trong Java?",
+          "options": [
+            "Tất cả các phương thức trong interface đều là public abstract",
+            "Interface có thể chứa các biến static final",
+            "Một lớp có thể implement nhiều interface",
+            "Interface có thể kế thừa từ một interface khác",
+            "Interface có thể chứa constructor"
+          ],
+          "correctAnswer": [
+            "Tất cả các phương thức trong interface đều là public abstract",
+            "Interface có thể chứa các biến static final",
+            "Một lớp có thể implement nhiều interface",
+            "Interface có thể kế thừa từ một interface khác"
+          ],
+          "reason": "Trong interface, các phương thức mặc định là `public abstract` (trước Java 8). Interface có thể chứa các biến `static final` (hằng số). Một lớp có thể implement nhiều interface. Interface có thể kế thừa từ một hoặc nhiều interface khác bằng từ khóa `extends`. Interface không thể chứa constructor."
+        },
+        {
+          "id": 36,
+          "question": "Đâu là đầu ra của đoạn code sau? `int x = 0; while (x < 5) { System.out.print(x + \" \"); x++; }`",
+          "options": [
+            "0 1 2 3 4",
+            "1 2 3 4 5",
+            "0 1 2 3 4 5",
+            "Không in ra gì cả"
+          ],
+          "correctAnswer": ["0 1 2 3 4"],
+          "reason": "Vòng lặp `while` sẽ in ra các giá trị của `x` từ 0 đến 4, mỗi giá trị cách nhau bởi một khoảng trắng."
+        },
+        {
+          "id": 37,
+          "question": "Những phát biểu nào sau đây là đúng về `enum` trong Java?",
+          "options": [
+            "Là một tập hợp các hằng số",
+            "Có thể chứa các phương thức",
+            "Có thể implement interface",
+            "Không thể kế thừa từ class khác",
+            "Có thể so sánh bằng toán tử `==`"
+          ],
+          "correctAnswer": [
+            "Là một tập hợp các hằng số",
+            "Có thể chứa các phương thức",
+            "Có thể implement interface",
+            "Có thể so sánh bằng toán tử `==`"
+          ],
+          "reason": "`enum` là một kiểu dữ liệu đặc biệt, đại diện cho một tập hợp các hằng số. `enum` có thể chứa các phương thức, implement interface, và không thể kế thừa từ class khác (nhưng mặc định kế thừa từ `java.lang.Enum`). Các hằng số `enum` có thể so sánh trực tiếp bằng toán tử `==`."
+        },
+        {
+          "id": 38,
+          "question": "Làm thế nào để tạo một bản sao (copy) của một mảng trong Java?",
+          "options": [
+            "Sử dụng phương thức `clone()`",
+            "Sử dụng vòng lặp `for` để sao chép từng phần tử",
+            "Sử dụng phương thức `arraycopy()` của lớp `System`",
+            "Sử dụng phương thức `copyOf()` của lớp `Arrays`"
+          ],
+          "correctAnswer": [
+            "Sử dụng phương thức `clone()`",
+            "Sử dụng vòng lặp `for` để sao chép từng phần tử",
+            "Sử dụng phương thức `arraycopy()` của lớp `System`",
+            "Sử dụng phương thức `copyOf()` của lớp `Arrays`"
+          ],
+          "reason": "Có nhiều cách để tạo bản sao của mảng. Phương thức `clone()` tạo một bản sao nông (shallow copy). Vòng lặp `for` có thể sao chép từng phần tử. Phương thức `arraycopy()` của lớp `System` và `copyOf()` của lớp `Arrays` cung cấp các cách hiệu quả để sao chép mảng."
+        },
+        {
+          "id": 39,
+          "question": "Đâu là đầu ra của đoạn code sau? `String s1 = \"Hello\"; String s2 = new String(\"Hello\"); System.out.println(s1 == s2);`",
+          "options": ["true", "false", "Lỗi biên dịch", "Không có đầu ra"],
+          "correctAnswer": ["false"],
+          "reason": "Toán tử `==` so sánh tham chiếu của hai đối tượng. Trong trường hợp này, `s1` tham chiếu đến chuỗi trong String pool, còn `s2` tham chiếu đến một đối tượng String mới được tạo ra trên heap. Do đó, kết quả là `false`."
+        },
+        {
+          "id": 40,
+          "question": "Những phát biểu nào sau đây là đúng về `static` method (phương thức tĩnh) trong Java?",
+          "options": [
+            "Có thể truy cập trực tiếp các biến instance",
+            "Không thể truy cập trực tiếp các biến instance",
+            "Có thể được gọi thông qua tên lớp",
+            "Có thể được gọi thông qua đối tượng",
+            "Có thể override phương thức non-static của lớp cha"
+          ],
+          "correctAnswer": [
+            "Không thể truy cập trực tiếp các biến instance",
+            "Có thể được gọi thông qua tên lớp",
+            "Có thể được gọi thông qua đối tượng"
+          ],
+          "reason": "Phương thức static thuộc về lớp, không thuộc về đối tượng cụ thể. Do đó, nó không thể truy cập trực tiếp các biến instance (non-static). Phương thức static có thể được gọi thông qua tên lớp hoặc đối tượng. Một phương thức static không thể override (ghi đè) phương thức non-static của lớp cha, nhưng có thể hiding (ẩn)."
+        },
+        {
+          "id": 41,
+          "question": "Đâu là các cách đúng để khai báo một biến `char` trong java?",
+          "options": [
+            "char c = 'a';",
+            "char c = \"a\";",
+            "char c = 97;",
+            "char c = (char)97;"
+          ],
+          "correctAnswer": [
+            "char c = 'a';",
+            "char c = 97;",
+            "char c = (char)97;"
+          ],
+          "reason": "Khai báo char sử dụng dấu nháy đơn. Ngoài ra char còn có thể được gán bằng mã ASCII hoặc ép kiểu số nguyên"
+        },
+        {
+          "id": 42,
+          "question": "Những cách nào sau đây là đúng để khai báo và khởi tạo một `ArrayList` chứa các chuỗi trong Java?",
+          "options": [
+            "ArrayList<String> list = new ArrayList<String>();",
+            "ArrayList<String> list = new ArrayList<>();",
+            "List<String> list = new ArrayList<String>();",
+            "List<String> list = new ArrayList<>();",
+            "ArrayList list = new ArrayList();"
+          ],
+          "correctAnswer": [
+            "ArrayList<String> list = new ArrayList<String>();",
+            "ArrayList<String> list = new ArrayList<>();",
+            "List<String> list = new ArrayList<String>();",
+            "List<String> list = new ArrayList<>();"
+          ],
+          "reason": "Cả bốn cách trên đều đúng cú pháp để khai báo và khởi tạo `ArrayList` chứa chuỗi. Nên sử dụng `List` thay vì `ArrayList` để khai báo kiểu. Dùng dấu `<>` (diamond operator) để suy luận kiểu từ Java 7 trở đi."
+        },
+        {
+          "id": 43,
+          "question": "Đâu là đầu ra của đoạn code sau? `int x = 10; int y = 5; System.out.println(x++ > 10 && --y < 5); System.out.println(x + \" \" + y);`",
+          "options": ["false\n11 4", "true\n11 4", "false\n10 5", "true\n10 5"],
+          "correctAnswer": ["false\n11 4"],
+          "reason": "Toán tử `&&` (AND) là short-circuit. `x++` trả về 10, sau đó `x` mới tăng lên 11. Vì `10 > 10` là `false`, biểu thức bên phải của `&&` không được đánh giá, do đó `--y` không được thực thi. `y` vẫn giữ nguyên giá trị 5. Do đó, kết quả đầu tiên là `false` và giá trị của `x` và `y` lần lượt là 11 và 4."
+        },
+        {
+          "id": 44,
+          "question": "Những phát biểu nào sau đây là đúng về `try-catch-finally` trong Java?",
+          "options": [
+            "Khối `finally` luôn được thực thi",
+            "Khối `finally` chỉ được thực thi nếu có ngoại lệ xảy ra",
+            "Một khối `try` có thể có nhiều khối `catch`",
+            "Một khối `try` phải có ít nhất một khối `catch` hoặc `finally`",
+            "Thứ tự của các khối `catch` không quan trọng"
+          ],
+          "correctAnswer": [
+            "Khối `finally` luôn được thực thi",
+            "Một khối `try` có thể có nhiều khối `catch`",
+            "Một khối `try` phải có ít nhất một khối `catch` hoặc `finally`"
+          ],
+          "reason": "Khối `finally` luôn được thực thi, bất kể có ngoại lệ xảy ra hay không. Một khối `try` có thể có nhiều khối `catch` để xử lý các loại ngoại lệ khác nhau. Một khối `try` phải đi kèm với ít nhất một khối `catch` hoặc `finally`. Thứ tự của các khối `catch` là quan trọng, các exception cụ thể hơn phải được đặt trước các exception tổng quát hơn."
+        },
+        {
+          "id": 45,
+          "question": "Đâu là cách đúng để tạo một luồng (thread) mới bằng cách implement interface `Runnable` trong Java?",
+          "options": [
+            "Tạo một lớp implement `Runnable`, override phương thức `run()`, tạo một đối tượng `Thread` và truyền đối tượng `Runnable` vào constructor, sau đó gọi phương thức `start()`",
+            "Tạo một lớp implement `Runnable`, override phương thức `start()`, tạo một đối tượng `Thread` và truyền đối tượng `Runnable` vào constructor, sau đó gọi phương thức `run()`",
+            "Tạo một lớp kế thừa từ `Thread`, override phương thức `run()`, tạo một đối tượng của lớp đó và gọi phương thức `start()`",
+            "Tạo một đối tượng `Thread` và gọi phương thức `run()`"
+          ],
+          "correctAnswer": [
+            "Tạo một lớp implement `Runnable`, override phương thức `run()`, tạo một đối tượng `Thread` và truyền đối tượng `Runnable` vào constructor, sau đó gọi phương thức `start()`"
+          ],
+          "reason": "Để tạo luồng bằng cách implement `Runnable`, cần tạo một lớp implement interface này, override phương thức `run()`, tạo một đối tượng `Thread` và truyền đối tượng `Runnable` vào constructor của `Thread`, sau đó gọi phương thức `start()` của đối tượng `Thread` để bắt đầu luồng."
+        },
+        {
+          "id": 46,
+          "question": "Những phát biểu nào sau đây là đúng về `abstract` method (phương thức trừu tượng) trong Java?",
+          "options": [
+            "Phải được khai báo trong `abstract class`",
+            "Không có phần thân (body)",
+            "Phải được override bởi lớp con",
+            "Có thể được khai báo là `final`",
+            "Có thể được khai báo là `static`"
+          ],
+          "correctAnswer": [
+            "Phải được khai báo trong `abstract class`",
+            "Không có phần thân (body)",
+            "Phải được override bởi lớp con"
+          ],
+          "reason": "Phương thức trừu tượng phải được khai báo trong `abstract class` hoặc `interface`, không có phần thân, và phải được override (ghi đè) bởi lớp con (trừ khi lớp con cũng là `abstract`). Phương thức trừu tượng không thể là `final` (vì phải được override) và không thể là `static`."
+        },
+        {
+          "id": 47,
+          "question": "Đâu là kết quả của đoạn code sau? `List<String> list = new ArrayList<>(); list.add(\"A\"); list.add(\"B\"); list.add(\"C\"); list.remove(1); System.out.println(list);`",
+          "options": ["[A, C]", "[A, B]", "[B, C]", "[A, B, C]"],
+          "correctAnswer": ["[A, C]"],
+          "reason": "Phương thức `remove(1)` sẽ xóa phần tử ở vị trí index 1 (phần tử \"B\") khỏi `ArrayList`. Do đó, danh sách còn lại là [\"A\", \"C\"]."
+        },
+        {
+          "id": 48,
+          "question": "Những phát biểu nào sau đây là đúng về `interface` trong Java?",
+          "options": [
+            "Có thể chứa các phương thức `default` từ Java 8 trở đi",
+            "Có thể chứa các phương thức `static` từ Java 8 trở đi",
+            "Có thể chứa các biến `public static final`",
+            "Có thể chứa các phương thức `private` từ Java 9 trở đi",
+            "Không thể chứa các phương thức `protected`"
+          ],
+          "correctAnswer": [
+            "Có thể chứa các phương thức `default` từ Java 8 trở đi",
+            "Có thể chứa các phương thức `static` từ Java 8 trở đi",
+            "Có thể chứa các biến `public static final`",
+            "Có thể chứa các phương thức `private` từ Java 9 trở đi",
+            "Không thể chứa các phương thức `protected`"
+          ],
+          "reason": "Từ Java 8, interface có thể chứa các phương thức `default` và `static`. Interface có thể chứa các biến `public static final` (hằng số). Từ Java 9, interface có thể chứa các phương thức `private`. Interface không thể chứa các phương thức `protected`."
+        },
+        {
+          "id": 49,
+          "question": "Đâu là đầu ra của đoạn code sau? `int x = 5; int y = 2; System.out.println(x / y);`",
+          "options": ["2.5", "2", "3", "Lỗi biên dịch"],
+          "correctAnswer": ["2"],
+          "reason": "Phép chia hai số nguyên trong Java sẽ trả về phần nguyên của kết quả. Do đó, 5 / 2 = 2."
+        },
+        {
+          "id": 50,
+          "question": "Những phát biểu nào sau đây là đúng về `String` pool trong Java?",
+          "options": [
+            "Là một vùng nhớ trong heap",
+            "Lưu trữ các đối tượng `String`",
+            "Giúp tiết kiệm bộ nhớ",
+            "Khi hai biến `String` có cùng giá trị, chúng sẽ tham chiếu đến cùng một đối tượng trong String pool",
+            "String pool là garbage collected"
+          ],
+          "correctAnswer": [
+            "Là một vùng nhớ trong heap",
+            "Lưu trữ các đối tượng `String`",
+            "Giúp tiết kiệm bộ nhớ",
+            "Khi hai biến `String` có cùng giá trị, chúng sẽ tham chiếu đến cùng một đối tượng trong String pool",
+            "String pool là garbage collected"
+          ],
+          "reason": "String pool là một vùng nhớ đặc biệt trong heap, lưu trữ các đối tượng `String` literal. Khi hai biến `String` có cùng giá trị và được tạo bằng string literal, chúng sẽ tham chiếu đến cùng một đối tượng trong String pool, giúp tiết kiệm bộ nhớ. String pool cũng là garbage collected."
+        }
+      ]
     }
   ]
 }
