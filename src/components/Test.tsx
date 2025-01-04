@@ -413,7 +413,7 @@ interface Question {
   id: number;
   question: string;
   options: string[];
-  correctAnswer: string;
+  correctAnswer: string | string[];
   reason?: string;
 }
 
@@ -422,13 +422,13 @@ interface TestProps {
   timeLimit: number;
   onComplete: (
     score: number | null,
-    selectedAnswers: { [key: number]: string }
+    selectedAnswers: { [key: number]: string | string[] }
   ) => void;
   onReset: () => void;
   onBack: () => void;
   savedState?: {
     score: number | null;
-    selectedAnswers: { [key: number]: string };
+    selectedAnswers: { [key: number]: string | string[] };
     isSubmitted: boolean;
   };
 }
@@ -505,7 +505,7 @@ const Test: React.FC<TestProps> = ({
     return 0;
   });
   const [selectedAnswers, setSelectedAnswers] = useState<{
-    [key: number]: string;
+    [key: number]: string | string[];
   }>(savedState?.selectedAnswers || {});
   const [timeLeft, setTimeLeft] = useState(
     savedState?.isSubmitted ? 0 : timeLimit
@@ -533,10 +533,33 @@ const Test: React.FC<TestProps> = ({
   }, [timeLeft, isSubmitted]);
 
   const handleAnswerSelect = (option: string) => {
-    setSelectedAnswers((prev) => ({
-      ...prev,
-      [questions[currentQuestion].id]: option,
-    }));
+    const currentQuestionId = questions[currentQuestion].id;
+    const isArrayAnswer = Array.isArray(
+      questions[currentQuestion].correctAnswer
+    );
+
+    if (!isArrayAnswer) {
+      setSelectedAnswers((prev) => ({
+        ...prev,
+        [currentQuestionId]: option,
+      }));
+      return;
+    }
+
+    setSelectedAnswers((prev) => {
+      const currentAnswers = Array.isArray(prev[currentQuestionId])
+        ? (prev[currentQuestionId] as string[])
+        : [];
+
+      const updatedAnswers = currentAnswers.includes(option)
+        ? currentAnswers.filter((ans) => ans !== option)
+        : [...currentAnswers, option];
+
+      return {
+        ...prev,
+        [currentQuestionId]: updatedAnswers,
+      };
+    });
   };
 
   const handleNextQuestion = () => {
@@ -550,15 +573,52 @@ const Test: React.FC<TestProps> = ({
   const handleSubmit = () => {
     setIsSubmitted(true);
     const rawScore = questions.reduce((acc, question) => {
-      return (
-        acc + (selectedAnswers[question.id] === question.correctAnswer ? 1 : 0)
-      );
+      const userAnswer = selectedAnswers[question.id];
+      const correctAnswer = question.correctAnswer;
+
+      if (Array.isArray(correctAnswer)) {
+        if (!Array.isArray(userAnswer)) return acc;
+
+        // Sort both arrays to ensure consistent comparison
+        const sortedUserAnswer = [...userAnswer].sort();
+        const sortedCorrectAnswer = [...correctAnswer].sort();
+
+        const isCorrect =
+          sortedUserAnswer.length === sortedCorrectAnswer.length &&
+          sortedUserAnswer.every(
+            (ans, idx) => ans === sortedCorrectAnswer[idx]
+          );
+
+        return acc + (isCorrect ? 1 : 0);
+      }
+
+      return acc + (userAnswer === correctAnswer ? 1 : 0);
     }, 0);
+
     const scoreOutOfTen = (rawScore / questions.length) * 10;
     onComplete(scoreOutOfTen, selectedAnswers);
-    setCurrentQuestion(
-      questions.findIndex((q) => selectedAnswers[q.id] !== q.correctAnswer)
-    );
+
+    const firstIncorrectIndex = questions.findIndex((q) => {
+      const userAnswer = selectedAnswers[q.id];
+      const correctAnswer = q.correctAnswer;
+
+      if (Array.isArray(correctAnswer)) {
+        if (!Array.isArray(userAnswer)) return true;
+
+        // Sort both arrays to ensure consistent comparison
+        const sortedUserAnswer = [...userAnswer].sort();
+        const sortedCorrectAnswer = [...correctAnswer].sort();
+
+        return !(
+          sortedUserAnswer.length === sortedCorrectAnswer.length &&
+          sortedUserAnswer.every((ans, idx) => ans === sortedCorrectAnswer[idx])
+        );
+      }
+
+      return userAnswer !== correctAnswer;
+    });
+
+    setCurrentQuestion(firstIncorrectIndex >= 0 ? firstIncorrectIndex : 0);
   };
 
   const handleReset = () => {
@@ -604,25 +664,47 @@ const Test: React.FC<TestProps> = ({
         </Timer>
       </div>
       <QuestionList>
-        {questions.map((q, index) => (
-          <QuestionDot
-            key={q.id}
-            active={currentQuestion === index}
-            answered={selectedAnswers[q.id] !== undefined}
-            isCorrect={selectedAnswers[q.id] === q.correctAnswer}
-            showResult={isSubmitted}
-            onClick={() => {
-              setCurrentQuestion(index);
-              if (isSubmitted) {
-                document
-                  .querySelector(".question-container")
-                  ?.scrollIntoView({ behavior: "smooth" });
-              }
-            }}
-          >
-            {index + 1}
-          </QuestionDot>
-        ))}
+        {questions.map((q, index) => {
+          const isCorrect = (() => {
+            if (!isSubmitted) return false;
+            const userAnswer = selectedAnswers[q.id];
+            const correctAnswer = q.correctAnswer;
+
+            if (Array.isArray(correctAnswer)) {
+              if (!Array.isArray(userAnswer)) return false;
+              const sortedUserAnswer = [...userAnswer].sort();
+              const sortedCorrectAnswer = [...correctAnswer].sort();
+              return (
+                sortedUserAnswer.length === sortedCorrectAnswer.length &&
+                sortedUserAnswer.every(
+                  (ans, idx) => ans === sortedCorrectAnswer[idx]
+                )
+              );
+            }
+
+            return userAnswer === correctAnswer;
+          })();
+
+          return (
+            <QuestionDot
+              key={q.id}
+              active={currentQuestion === index}
+              answered={selectedAnswers[q.id] !== undefined}
+              isCorrect={isCorrect}
+              showResult={isSubmitted}
+              onClick={() => {
+                setCurrentQuestion(index);
+                if (isSubmitted) {
+                  document
+                    .querySelector(".question-container")
+                    ?.scrollIntoView({ behavior: "smooth" });
+                }
+              }}
+            >
+              {index + 1}
+            </QuestionDot>
+          );
+        })}
       </QuestionList>
 
       <QuestionContainer className="question-container">
@@ -632,26 +714,42 @@ const Test: React.FC<TestProps> = ({
         {currentQuestionData.options.map((option, index) => (
           <div key={index}>
             <OptionButton
-              selected={selectedAnswers[currentQuestionData.id] === option}
+              selected={
+                Array.isArray(selectedAnswers[currentQuestionData.id])
+                  ? (
+                      selectedAnswers[currentQuestionData.id] as string[]
+                    ).includes(option)
+                  : selectedAnswers[currentQuestionData.id] === option
+              }
               onClick={() => handleAnswerSelect(option)}
               disabled={isSubmitted}
               isCorrect={
-                isSubmitted && option === currentQuestionData.correctAnswer
+                isSubmitted &&
+                (Array.isArray(currentQuestionData.correctAnswer)
+                  ? (currentQuestionData.correctAnswer as string[]).includes(
+                      option
+                    )
+                  : currentQuestionData.correctAnswer === option)
               }
               showResult={isSubmitted}
             >
               {renderQuestionWithCode(option)}
-              {isSubmitted && option === currentQuestionData.correctAnswer && (
-                <span
-                  style={{
-                    marginLeft: "8px",
-                    color: "#48BB78",
-                    fontWeight: "bold",
-                  }}
-                >
-                  ✓
-                </span>
-              )}
+              {isSubmitted &&
+                (Array.isArray(currentQuestionData.correctAnswer)
+                  ? (currentQuestionData.correctAnswer as string[]).includes(
+                      option
+                    )
+                  : currentQuestionData.correctAnswer === option) && (
+                  <span
+                    style={{
+                      marginLeft: "8px",
+                      color: "#48BB78",
+                      fontWeight: "bold",
+                    }}
+                  >
+                    ✓
+                  </span>
+                )}
             </OptionButton>
           </div>
         ))}
@@ -697,14 +795,27 @@ const Test: React.FC<TestProps> = ({
           <h3>Test Submitted!</h3>
           <p>
             {(
-              (questions.reduce(
-                (acc, question) =>
-                  acc +
-                  (selectedAnswers[question.id] === question.correctAnswer
-                    ? 1
-                    : 0),
-                0
-              ) /
+              (questions.reduce((acc, question) => {
+                const userAnswer = selectedAnswers[question.id];
+                const correctAnswer = question.correctAnswer;
+
+                if (Array.isArray(correctAnswer)) {
+                  if (!Array.isArray(userAnswer)) return acc;
+                  const sortedUserAnswer = [...userAnswer].sort();
+                  const sortedCorrectAnswer = [...correctAnswer].sort();
+                  return (
+                    acc +
+                    (sortedUserAnswer.length === sortedCorrectAnswer.length &&
+                    sortedUserAnswer.every(
+                      (ans, idx) => ans === sortedCorrectAnswer[idx]
+                    )
+                      ? 1
+                      : 0)
+                  );
+                }
+
+                return acc + (userAnswer === correctAnswer ? 1 : 0);
+              }, 0) /
                 questions.length) *
               10
             ).toFixed(1)}

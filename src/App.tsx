@@ -153,7 +153,7 @@ const App: React.FC = () => {
   const [testResults, setTestResults] = useState<{
     [testId: number]: {
       score: number | null;
-      selectedAnswers: { [questionId: number]: string };
+      selectedAnswers: { [questionId: number]: string | string[] };
       isSubmitted: boolean;
     };
   }>({});
@@ -165,7 +165,7 @@ const App: React.FC = () => {
   const handleTestComplete = (
     testId: number,
     score: number | null,
-    selectedAnswers: { [questionId: number]: string }
+    selectedAnswers: { [questionId: number]: string | string[] }
   ) => {
     setTestResults((prev) => ({
       ...prev,
