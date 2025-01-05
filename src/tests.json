@@ -7396,7 +7396,8 @@
           "options": [
             "Counting Sort",
             "Radix Sort",
-            ["Bubble Sort", "Selection Sort"],
+            "Bubble Sort",
+            "Selection Sort",
             "Bucket Sort"
           ],
           "correctAnswer": ["Bubble Sort", "Selection Sort"],
@@ -7408,7 +7409,8 @@
           "options": [
             "Bubble Sort",
             "Insertion Sort",
-            ["Merge Sort", "Quick Sort"],
+            "Merge Sort",
+            "Quick Sort",
             "Selection Sort"
           ],
           "correctAnswer": ["Merge Sort", "Quick Sort"],
@@ -7644,6 +7646,326 @@
           ],
           "correctAnswer": "Khi bài toán có các bài toán con gối chồng (được tính toán lại nhiều lần)",
           "reason": "Quy hoạch động hiệu quả hơn khi các bài toán con được tính toán lại nhiều lần, vì nó lưu trữ kết quả để sử dụng lại."
+        }
+      ]
+    },
+    {
+      "id": 17,
+      "title": "Algorithm Application Quiz",
+      "timeLimit": 6000,
+      "questions": [
+        {
+          "id": 1,
+          "question": "Cho dãy số: [2, 5, 8, 1, 9, 4]. Nếu áp dụng thuật toán sắp xếp nổi bọt (Bubble Sort), sau lần lặp đầu tiên, dãy số sẽ trở thành?",
+          "options": [
+            "[2, 5, 1, 8, 4, 9]",
+            "[2, 5, 8, 1, 9, 4]",
+            "[1, 2, 5, 8, 9, 4]",
+            "[2, 1, 5, 8, 4, 9]"
+          ],
+          "correctAnswer": "[2, 5, 1, 8, 4, 9]",
+          "reason": "Lần lặp đầu tiên của Bubble Sort sẽ so sánh và đổi chỗ các cặp (5, 1), (8, 4), (9, 4)."
+        },
+        {
+          "id": 2,
+          "question": "Cho dãy số: [7, 2, 9, 1, 5, 3]. Nếu áp dụng thuật toán sắp xếp chọn (Selection Sort), phần tử nào sẽ được chọn đầu tiên để đưa về vị trí đúng?",
+          "options": ["7", "2", "1", "9"],
+          "correctAnswer": "1",
+          "reason": "Selection Sort tìm phần tử nhỏ nhất (1) trong dãy chưa sắp xếp để đưa về đầu."
+        },
+        {
+          "id": 3,
+          "question": "Cho dãy số: [3, 8, 2, 6, 1, 9, 4]. Nếu áp dụng thuật toán sắp xếp chèn (Insertion Sort), sau khi chèn phần tử 2 vào vị trí thích hợp, dãy số trở thành?",
+          "options": [
+            "2, 3, 8, 6, 1, 9, 4]",
+            "[3, 2, 8, 6, 1, 9, 4]",
+            "[3, 8, 2, 6, 1, 9, 4]",
+            "[1, 2, 3, 6, 8, 9, 4]"
+          ],
+          "correctAnswer": "[2, 3, 8, 6, 1, 9, 4]",
+          "reason": "Insertion Sort sẽ chèn 2 vào vị trí đầu tiên, trước 3 và 8."
+        },
+        {
+          "id": 4,
+          "question": "Cho mảng đã sắp xếp: [2, 4, 6, 8, 10, 12]. Nếu tìm kiếm nhị phân số 8, các phần tử nào sẽ được so sánh với số 8?",
+          "options": ["6", "6, 10", ["6, 10, 8"], "8"],
+          "correctAnswer": ["6, 10, 8"],
+          "reason": "Đầu tiên so sánh 8 với phần tử giữa (6), sau đó là phần tử giữa của nửa bên phải (10), cuối cùng là 8."
+        },
+        {
+          "id": 5,
+          "question": "Cho mảng đã sắp xếp: [1, 3, 5, 7, 9, 11]. Nếu tìm kiếm nhị phân số 13, thuật toán sẽ kết luận như thế nào?",
+          "options": [
+            "13 nằm ở vị trí 6",
+            "13 nằm ở vị trí 7",
+            "13 không có trong mảng",
+            "Lỗi"
+          ],
+          "correctAnswer": "13 không có trong mảng",
+          "reason": "Sau khi thu hẹp phạm vi tìm kiếm, thuật toán sẽ không tìm thấy 13 trong mảng."
+        },
+        {
+          "id": 6,
+          "question": "Giả sử bạn có một bảng băm với 5 vị trí (0-4) và sử dụng hàm băm h(k) = k mod 5. Nếu bạn chèn các khóa 12, 17, 22 vào bảng băm theo thứ tự đó, các khóa sẽ được lưu trữ ở vị trí nào?",
+          "options": ["[12, 17, 22]", "[2, 2, 2]", "[2, 7, 2]", "[2, 2, 7]"],
+          "correctAnswer": "[2, 2, 2]",
+          "reason": "12 mod 5 = 2, 17 mod 5 = 2, 22 mod 5 = 2. Cả ba khóa đều được băm vào vị trí 2, gây ra xung đột."
+        },
+        {
+          "id": 7,
+          "question": "Giả sử bạn đang sử dụng phương pháp dò tuyến tính để giải quyết xung đột trong bảng băm. Với hàm băm h(k) = k mod 5, nếu vị trí 2 đã bị chiếm, khóa 7 sẽ được chèn vào vị trí nào tiếp theo?",
+          "options": ["0", "1", "3", "4"],
+          "correctAnswer": "3",
+          "reason": "Dò tuyến tính sẽ kiểm tra các vị trí tiếp theo (3, 4, 0, 1) cho đến khi tìm thấy vị trí trống."
+        },
+        {
+          "id": 8,
+          "question": "Cho đồ thị có hướng với các cạnh: (A, B), (A, C), (B, D), (C, D), (D, E). Nếu áp dụng thuật toán tìm kiếm theo chiều rộng (BFS) bắt đầu từ đỉnh A, thứ tự duyệt các đỉnh sẽ là?",
+          "options": [
+            "A, B, C, D, E",
+            "A, C, B, D, E",
+            "A, B, D, C, E",
+            "A, C, D, B, E"
+          ],
+          "correctAnswer": "A, B, C, D, E",
+          "reason": "BFS duyệt các đỉnh theo từng tầng, bắt đầu từ đỉnh gốc."
+        },
+        {
+          "id": 9,
+          "question": "Cho đồ thị vô hướng với các cạnh: (A, B), (A, C), (B, C), (B, D), (C, E). Nếu áp dụng thuật toán tìm kiếm theo chiều sâu (DFS) bắt đầu từ đỉnh A, thứ tự duyệt các đỉnh có thể là?",
+          "options": [
+            "A, B, C, E, D",
+            ["A, B, D, C, E"],
+            "A, C, B, D, E",
+            "A, B, E, C, D"
+          ],
+          "correctAnswer": ["A, B, D, C, E"],
+          "reason": "DFS đi sâu vào một nhánh trước khi quay lui, thứ tự cụ thể phụ thuộc vào thứ tự duyệt các đỉnh kề."
+        },
+        {
+          "id": 10,
+          "question": "Cho đồ thị có trọng số với các cạnh: (A, B, 4), (A, C, 2), (B, C, 1), (B, D, 5), (C, D, 8), (C, E, 10), (D, E, 2), (D, F, 6), (E, F, 3). Nếu áp dụng thuật toán Dijkstra từ đỉnh A, đường đi ngắn nhất từ A đến F có tổng trọng số là bao nhiêu?",
+          "options": ["7", "9", "11", "13"],
+          "correctAnswer": "9",
+          "reason": "Đường đi ngắn nhất là A -> C -> B -> D -> F với tổng trọng số 2 + 1 + 5 + 6 = 9."
+        },
+        {
+          "id": 11,
+          "question": "Cho đồ thị có trọng số như câu hỏi 10, nếu áp dụng thuật toán Dijkstra từ đỉnh A, đường đi ngắn nhất từ A đến E có tổng trọng số là bao nhiêu?",
+          "options": ["10", "12", "7", "9"],
+          "correctAnswer": "7",
+          "reason": "Đường đi ngắn nhất là A -> C -> B -> D -> E với tổng trọng số là 2 + 1+ 2 + 2 = 7"
+        },
+        {
+          "id": 12,
+          "question": "Cho đồ thị vô hướng với các cạnh: (A, B, 2), (A, C, 4), (B, C, 1), (B, D, 7), (C, E, 3), (D, E, 1), (D, F, 5), (E, F, 8). Nếu áp dụng thuật toán Kruskal, cạnh nào sẽ được chọn đầu tiên vào cây bao trùm tối thiểu?",
+          "options": ["(A, B)", "(B, C)", "(C, E)", "(D, E)"],
+          "correctAnswer": "(B, C)",
+          "reason": "Kruskal chọn cạnh có trọng số nhỏ nhất (B, C) mà không tạo thành chu trình."
+        },
+        {
+          "id": 13,
+          "question": "Cho đồ thị vô hướng với các cạnh như câu hỏi 12. Nếu áp dụng thuật toán Prim bắt đầu từ đỉnh A, cạnh nào sẽ được chọn đầu tiên vào cây bao trùm tối thiểu?",
+          "options": ["(A, B)", "(A, C)", "(B, C)", "(B, D)"],
+          "correctAnswer": "(A, B)",
+          "reason": "Prim bắt đầu từ một đỉnh và chọn cạnh có trọng số nhỏ nhất nối với cây hiện tại."
+        },
+        {
+          "id": 14,
+          "question": "Cho tập hợp các hoạt động với thời gian bắt đầu và kết thúc: {(1, 4), (3, 5), (0, 6), (5, 7), (8, 9), (5, 9)}. Nếu áp dụng thuật toán tham lam để chọn hoạt động, các hoạt động nào sẽ được chọn?",
+          "options": [
+            "(1, 4), (5, 7), (8, 9)",
+            "(3, 5), (5, 7)",
+            "(0, 6), (8, 9)",
+            "(1, 4), (3, 5), (5, 7), (8, 9)"
+          ],
+          "correctAnswer": "(1, 4), (5, 7), (8, 9)",
+          "reason": "Chọn hoạt động có thời gian kết thúc sớm nhất và không xung đột với các hoạt động đã chọn."
+        },
+        {
+          "id": 15,
+          "question": "Cho các số Fibonacci đầu tiên: 0, 1, 1, 2, 3, 5, 8, 13. Nếu sử dụng đệ quy để tính số Fibonacci thứ 6 (F6), có bao nhiêu lần gọi hàm fibonacci(2)?",
+          "options": ["1", "2", "3", "5"],
+          "correctAnswer": "5",
+          "reason": "F6 gọi F5, F4. F5 gọi F4, F3. F4 gọi F3, F2 (2 lần). F3 gọi F2, F1 (3 lần). Tổng cộng fibonacci(2) được gọi 5 lần."
+        },
+        {
+          "id": 16,
+          "question": "Cho các giá trị: values = [60, 100, 120] và trọng lượng: weights = [10, 20, 30], sức chứa W = 50. Nếu áp dụng thuật toán quy hoạch động cho bài toán cái túi 0/1, giá trị lớn nhất có thể đạt được là bao nhiêu?",
+          "options": ["220", "280", "180", "300"],
+          "correctAnswer": "220",
+          "reason": "Chọn vật phẩm thứ nhất và thứ ba (60 + 120) với tổng trọng lượng 40, hoặc vật phẩm thứ hai (100) với tổng trọng lượng 20. Giá trị lớn nhất là 220."
+        },
+        {
+          "id": 17,
+          "question": "Giả sử bạn đang xây dựng hệ thống gợi ý phim. Bạn có dữ liệu về xếp hạng phim của người dùng (từ 1 đến 5 sao). Thuật toán nào sau đây có thể được sử dụng để dự đoán xếp hạng của người dùng cho một bộ phim mà họ chưa xem?",
+          "options": [
+            "Sắp xếp nổi bọt (Bubble Sort)",
+            "Tìm kiếm nhị phân (Binary Search)",
+            "Lọc cộng tác (Collaborative Filtering)",
+            "K-Means Clustering"
+          ],
+          "correctAnswer": ["Lọc cộng tác (Collaborative Filtering)"],
+          "reason": "Lọc cộng tác dự đoán sở thích của người dùng dựa trên sở thích của những người dùng tương tự."
+        },
+        {
+          "id": 18,
+          "question": "Bạn có dữ liệu về các giao dịch mua hàng của khách hàng trong một cửa hàng trực tuyến. Bạn muốn phân nhóm khách hàng thành các nhóm khác nhau dựa trên hành vi mua sắm của họ. Thuật toán nào sau đây phù hợp nhất cho việc này?",
+          "options": [
+            "Sắp xếp chèn (Insertion Sort)",
+            "Tìm kiếm theo chiều sâu (DFS)",
+            "K-Means Clustering",
+            "Apriori"
+          ],
+          "correctAnswer": ["K-Means Clustering", "Apriori"],
+          "reason": "K-Means Clustering phân nhóm các điểm dữ liệu (khách hàng) thành các cụm dựa trên khoảng cách giữa chúng. Apriori tìm các tập hợp các itemset (sản phẩm) thường xuyên xuất hiện cùng nhau trong giỏ hàng"
+        },
+        {
+          "id": 19,
+          "question": "Bạn đang phát triển một hệ thống nhận diện khuôn mặt. Thuật toán nào sau đây có thể được sử dụng để trích xuất các đặc trưng từ ảnh khuôn mặt?",
+          "options": [
+            "Sắp xếp trộn (Merge Sort)",
+            "Thuật toán Dijkstra",
+            "Convolutional Neural Networks (CNNs)",
+            "Principal Component Analysis (PCA)"
+          ],
+          "correctAnswer": [
+            "Convolutional Neural Networks (CNNs)",
+            "Principal Component Analysis (PCA)"
+          ],
+          "reason": "CNN và PCA là các kỹ thuật học sâu và giảm chiều dữ liệu hiệu quả cho việc trích xuất đặc trưng ảnh."
+        },
+        {
+          "id": 20,
+          "question": "Bạn đang xây dựng một bộ lọc thư rác. Bạn có một tập dữ liệu gồm các email được dán nhãn là 'spam' hoặc 'ham' (không phải spam). Thuật toán nào sau đây có thể được sử dụng để phân loại email mới?",
+          "options": [
+            "Tìm kiếm theo chiều rộng (BFS)",
+            "Cây bao trùm tối thiểu (Minimum Spanning Tree)",
+            "Naive Bayes",
+            "Support Vector Machines (SVM)"
+          ],
+          "correctAnswer": ["Naive Bayes", "Support Vector Machines (SVM)"],
+          "reason": "Naive Bayes và SVM là các thuật toán phân loại phổ biến, thích hợp cho bài toán phân loại văn bản."
+        },
+        {
+          "id": 21,
+          "question": "Bạn có dữ liệu về lịch sử duyệt web của người dùng. Bạn muốn tìm các trang web thường được truy cập cùng nhau. Thuật toán nào sau đây có thể được sử dụng cho việc này?",
+          "options": [
+            "Tìm kiếm nhị phân (Binary Search)",
+            "Sắp xếp chọn (Selection Sort)",
+            "Apriori",
+            "FP-Growth"
+          ],
+          "correctAnswer": ["Apriori", "FP-Growth"],
+          "reason": "Apriori và FP-Growth là các thuật toán khai phá luật kết hợp, tìm các tập hợp mục (trang web) thường xuyên xuất hiện cùng nhau."
+        },
+        {
+          "id": 22,
+          "question": "Bạn đang phát triển một trò chơi cờ vua. Thuật toán nào sau đây có thể được sử dụng để tìm nước đi tối ưu cho máy tính?",
+          "options": [
+            "Thuật toán Kruskal",
+            "Thuật toán Dijkstra",
+            "Minimax",
+            "Alpha-Beta Pruning"
+          ],
+          "correctAnswer": ["Minimax", "Alpha-Beta Pruning"],
+          "reason": "Minimax và Alpha-Beta Pruning là các thuật toán tìm kiếm trên cây trò chơi, giúp tìm nước đi tối ưu trong các trò chơi đối kháng."
+        },
+        {
+          "id": 23,
+          "question": "Bạn có dữ liệu về các chuyến bay giữa các thành phố, bao gồm thời gian bay và chi phí. Bạn muốn tìm đường bay giữa hai thành phố với chi phí thấp nhất. Thuật toán nào có thể được sử dụng?",
+          "options": [
+            "Sắp xếp nổi bọt (Bubble Sort)",
+            "Tìm kiếm theo chiều sâu (DFS)",
+            "Thuật toán Bellman-Ford",
+            "Thuật toán Prim"
+          ],
+          "correctAnswer": "Thuật toán Bellman-Ford",
+          "reason": "Thuật toán Bellman-Ford có thể tìm đường đi ngắn nhất (chi phí thấp nhất) trong đồ thị có trọng số, kể cả trọng số âm (nếu có)."
+        },
+        {
+          "id": 24,
+          "question": "Cho dãy số: [1, 4, 2, 8, 3, 9, 6]. Nếu bạn muốn tìm hai số có tổng lớn nhất, bạn sẽ sử dụng thuật toán nào?",
+          "options": [
+            "Tìm kiếm nhị phân",
+            "Sắp xếp, sau đó lấy tổng hai phần tử cuối",
+            "Chia để trị",
+            "Đệ quy"
+          ],
+          "correctAnswer": "Sắp xếp, sau đó lấy tổng hai phần tử cuối",
+          "reason": "Sau khi sắp xếp, hai số lớn nhất sẽ nằm ở cuối dãy."
+        },
+        {
+          "id": 25,
+          "question": "Bạn có một danh sách các số nguyên không sắp xếp. Bạn muốn tìm số trung vị (median) của danh sách đó. Thuật toán nào sau đây có thể được sử dụng hiệu quả nhất?",
+          "options": [
+            "Sắp xếp nổi bọt (Bubble Sort)",
+            "Sắp xếp trộn (Merge Sort)",
+            "Quickselect",
+            "Tìm kiếm nhị phân (Binary Search)"
+          ],
+          "correctAnswer": "Quickselect",
+          "reason": "Quickselect là thuật toán dựa trên Quick Sort, được tối ưu để tìm phần tử lớn thứ k (ở đây là trung vị) mà không cần sắp xếp toàn bộ."
+        },
+        {
+          "id": 26,
+          "question": "Bạn có một tập dữ liệu lớn và muốn giảm số chiều của dữ liệu nhưng vẫn giữ lại được phần lớn thông tin quan trọng. Thuật toán nào sau đây phù hợp?",
+          "options": [
+            "K-Means Clustering",
+            "Linear Regression",
+            "Principal Component Analysis (PCA)",
+            "Decision Trees"
+          ],
+          "correctAnswer": "Principal Component Analysis (PCA)",
+          "reason": "PCA là thuật toán giảm chiều dữ liệu, tìm ra các hướng (chiều) chính trong dữ liệu để biểu diễn dữ liệu hiệu quả hơn."
+        },
+        {
+          "id": 27,
+          "question": "Bạn đang phát triển một ứng dụng dịch máy. Thuật toán nào sau đây có thể được sử dụng để dịch văn bản từ ngôn ngữ này sang ngôn ngữ khác?",
+          "options": [
+            "Depth-First Search (DFS)",
+            "Breadth-First Search (BFS)",
+            "Recurrent Neural Networks (RNNs)",
+            "Dijkstra's Algorithm"
+          ],
+          "correctAnswer": "Recurrent Neural Networks (RNNs)",
+          "reason": "RNN, đặc biệt là các kiến trúc như LSTM và GRU, rất phù hợp cho các bài toán xử lý chuỗi như dịch máy."
+        },
+        {
+          "id": 28,
+          "question": "Bạn có dữ liệu về vị trí của các cửa hàng và muốn tìm vị trí tối ưu để đặt một kho hàng mới sao cho tổng khoảng cách từ kho hàng đến các cửa hàng là nhỏ nhất. Thuật toán nào có thể hỗ trợ bạn?",
+          "options": [
+            "Sắp xếp chèn (Insertion Sort)",
+            "Kruskal's Algorithm",
+            "Gradient Descent",
+            "Binary Search"
+          ],
+          "correctAnswer": "Gradient Descent",
+          "reason": "Các phương pháp tối ưu như Gradient Descent có thể được sử dụng để tìm vị trí tối ưu cho kho hàng."
+        },
+        {
+          "id": 29,
+          "question": "Bạn đang xây dựng một mô hình dự báo giá cổ phiếu dựa trên dữ liệu lịch sử. Thuật toán/mô hình nào sau đây có thể được sử dụng?",
+          "options": [
+            "Depth-First Search",
+            "K-Nearest Neighbors",
+            "Time Series Analysis (ARIMA, LSTM)",
+            "Prim's Algorithm"
+          ],
+          "correctAnswer": "Time Series Analysis (ARIMA, LSTM)",
+          "reason": "ARIMA và LSTM là các mô hình chuỗi thời gian, phù hợp cho việc dự báo các giá trị trong tương lai dựa trên dữ liệu quá khứ."
+        },
+        {
+          "id": 30,
+          "question": "Bạn có một tập dữ liệu về các email và muốn phát hiện xem email nào có chứa nội dung lừa đảo (phishing). Thuật toán nào sau đây có thể được áp dụng?",
+          "options": [
+            "Sắp xếp nhanh (Quick Sort)",
+            "Tìm kiếm theo chiều rộng (BFS)",
+            "Support Vector Machines (SVM) with text features",
+            "Merge Sort"
+          ],
+          "correctAnswer": "Support Vector Machines (SVM) with text features",
+          "reason": "SVM, kết hợp với các kỹ thuật trích xuất đặc trưng từ văn bản (như TF-IDF), có thể phân loại email hiệu quả."
         }
       ]
     }
