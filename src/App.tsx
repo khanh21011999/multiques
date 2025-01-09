@@ -1,8 +1,8 @@
 import React, { useState } from "react";
 import Test from "./components/Test";
-import testsData from "./tests.json";
+import testsData from "./test2.json";
 import styled from "styled-components";
-
+console.log("testsData", testsData);
 const AppContainer = styled.div`
   padding: 3rem 2rem;
   background: linear-gradient(120deg, #a1c4fd 0%, #c2e9fb 100%);

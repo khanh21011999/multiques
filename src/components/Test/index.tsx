@@ -14,6 +14,7 @@ const Test: React.FC<TestProps> = ({ questions, onComplete }) => {
   const [selectedAnswers, setSelectedAnswers] = useState<string[]>([]);
   const [score, setScore] = useState(0);
   const [showResults, setShowResults] = useState(false);
+  const [isAnswerShown, setIsAnswerShown] = useState(false);
 
   const currentQuestion = questions[currentQuestionIndex];
   const isMultiSelect = Array.isArray(currentQuestion.correctAnswer);
@@ -28,26 +29,29 @@ const Test: React.FC<TestProps> = ({ questions, onComplete }) => {
       });
     } else {
       setSelectedAnswers([answer]);
-    }
-  };
-
-  const handleSubmit = () => {
-    if (isMultiSelect) {
-      const correct =
-        currentQuestion.correctAnswer.length === selectedAnswers.length &&
-        currentQuestion.correctAnswer.every((answer) =>
-          selectedAnswers.includes(answer)
-        );
-      if (correct) setScore((prev) => prev + 1);
-    } else {
-      if (selectedAnswers[0] === currentQuestion.correctAnswer) {
+      setIsAnswerShown(true);
+      if (answer === currentQuestion.correctAnswer) {
         setScore((prev) => prev + 1);
       }
     }
+  };
 
+  const handleShowAnswer = () => {
+    setIsAnswerShown(true);
+    const correct =
+      Array.isArray(currentQuestion.correctAnswer) &&
+      currentQuestion.correctAnswer.length === selectedAnswers.length &&
+      currentQuestion.correctAnswer.every((answer) =>
+        selectedAnswers.includes(answer)
+      );
+    if (correct) setScore((prev) => prev + 1);
+  };
+
+  const handleNext = () => {
     if (currentQuestionIndex < questions.length - 1) {
       setCurrentQuestionIndex((prev) => prev + 1);
       setSelectedAnswers([]);
+      setIsAnswerShown(false);
     } else {
       setShowResults(true);
       onComplete(score);
@@ -61,25 +65,48 @@ const Test: React.FC<TestProps> = ({ questions, onComplete }) => {
           <div className="question">
             <h2>{currentQuestion.question}</h2>
             <div className="answers">
-              {currentQuestion.answers.map((answer, index) => (
-                <button
-                  key={index}
-                  className={`answer ${
-                    selectedAnswers.includes(answer) ? "selected" : ""
-                  }`}
-                  onClick={() => handleAnswerSelect(answer)}
-                >
-                  {answer}
-                </button>
-              ))}
+              {currentQuestion.answers.map((answer, index) => {
+                const isSelected = selectedAnswers.includes(answer);
+                const isCorrect =
+                  isAnswerShown &&
+                  (Array.isArray(currentQuestion.correctAnswer)
+                    ? currentQuestion.correctAnswer.includes(answer)
+                    : answer === currentQuestion.correctAnswer);
+
+                return (
+                  <button
+                    key={index}
+                    className={`answer ${isSelected ? "selected" : ""} ${
+                      isAnswerShown
+                        ? isCorrect
+                          ? "correct"
+                          : isSelected
+                          ? "incorrect"
+                          : ""
+                        : ""
+                    }`}
+                    onClick={() => handleAnswerSelect(answer)}
+                    disabled={isAnswerShown}
+                  >
+                    {answer}
+                  </button>
+                );
+              })}
             </div>
-            <button
-              className="submit"
-              onClick={handleSubmit}
-              disabled={selectedAnswers.length === 0}
-            >
-              Submit
-            </button>
+            {isMultiSelect && !isAnswerShown && (
+              <button
+                className="submit"
+                onClick={handleShowAnswer}
+                disabled={selectedAnswers.length === 0}
+              >
+                Answer
+              </button>
+            )}
+            {isAnswerShown && (
+              <button className="submit" onClick={handleNext}>
+                Next
+              </button>
+            )}
           </div>
           <div className="progress">
             Question {currentQuestionIndex + 1} of {questions.length}
